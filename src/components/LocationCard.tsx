@@ -12,9 +12,9 @@ interface LocationProps {
   orderText: string;
 }
 
-export default function LocationCard({ island, area, hours, special, mapUrl, image, orderText }: LocationProps) {
+export default function LocationCard({ id, island, area, hours, special, mapUrl, image, orderText }: LocationProps) {
   return (
-    <div className="border-slate-light flex flex-col border-r bg-slate-dark">
+    <div id={id} className="border-slate-light flex flex-col border-r bg-slate-dark scroll-mt-24">
       <div className="border-slate-light flex flex-grow flex-col justify-between border-b p-10">
         <div className="md:min-h-[160px]">
           <h2 className="text-3xl font-bold tracking-tighter text-white uppercase leading-none">

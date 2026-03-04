@@ -18,9 +18,9 @@ interface MenuSectionProps {
   isDark?: boolean;
 }
 
-export default function MenuSection({ number, title, subtitle, sections, isDark }: MenuSectionProps) {
+export default function MenuSection({ id, number, title, subtitle, sections, isDark }: MenuSectionProps) {
   return (
-    <div className={`border-slate-light border-r p-12 ${isDark ? 'bg-slate-medium/30' : ''}`}>
+    <div id={id} className={`border-slate-light border-r p-12 scroll-mt-24 ${isDark ? 'bg-slate-medium/30' : ''}`}>
       <span className="font-mono text-matte-orange text-[10px] font-bold tracking-widest uppercase">
         // {number}. {title}
       </span>
