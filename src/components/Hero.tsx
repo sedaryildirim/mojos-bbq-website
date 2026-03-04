@@ -18,7 +18,7 @@ export default function Hero() {
           duration: 0.8, 
           ease: [0.21, 1.11, 0.81, 0.99] // Custom "slam" ease
         }}
-        className="text-matte-orange text-[16vw] leading-[0.8] font-black tracking-tighter uppercase italic lg:text-[13vw] relative z-10"
+        className="text-matte-orange text-[16vw] leading-[0.8] font-display tracking-tighter uppercase italic lg:text-[13vw] relative z-10"
       >
         Mojos
       </motion.h1>

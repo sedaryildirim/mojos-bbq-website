@@ -1,3 +1,5 @@
+import { Instagram, Facebook } from "lucide-react";
+
 export default function Footer() {
   const handleConnectInstagram = async () => {
     try {
@@ -22,10 +24,10 @@ export default function Footer() {
           [ ADMIN: CONNECT INSTAGRAM ]
         </button>
       </div>
-      <div className="flex flex-wrap justify-center gap-x-12 gap-y-4">
+      <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
         {[
-          { name: 'Instagram', url: 'https://www.instagram.com/mojos.th/' },
-          { name: 'Facebook', url: 'https://www.facebook.com/mojosbbqthailand/' },
+          { name: 'Instagram', url: 'https://www.instagram.com/mojos.th/', icon: <Instagram size={16} strokeWidth={1.5} /> },
+          { name: 'Facebook', url: 'https://www.facebook.com/mojosbbqthailand/', icon: <Facebook size={16} strokeWidth={1.5} /> },
           { name: 'Contact', url: 'mailto:hello@mojos.th' },
           { name: 'Privacy Policy', url: '#' }
         ].map((link) => (
@@ -34,9 +36,10 @@ export default function Footer() {
             href={link.url}
             target={link.url.startsWith('http') ? "_blank" : undefined}
             rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-            className="font-mono text-[10px] tracking-[0.2em] text-slate-400 uppercase transition-colors hover:text-white"
+            className="font-mono text-[10px] tracking-[0.2em] text-slate-400 uppercase transition-all duration-300 hover:text-white hover:scale-110 flex items-center justify-center"
+            aria-label={link.name}
           >
-            {link.name}
+            {link.icon || link.name}
           </a>
         ))}
       </div>

@@ -18,7 +18,7 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
     <div id={id} className="border-slate-light flex flex-col border-r bg-slate-dark scroll-mt-24">
       <div className="border-slate-light flex flex-grow flex-col justify-between border-b p-10">
         <div className="md:min-h-[180px]">
-          <h2 className="text-3xl font-bold tracking-tighter text-white uppercase leading-[1.1]">
+          <h2 className="text-3xl font-heading font-bold tracking-tighter text-white uppercase leading-[1.1]">
             {island}
             <div className="text-matte-orange mt-1">{area}</div>
           </h2>
