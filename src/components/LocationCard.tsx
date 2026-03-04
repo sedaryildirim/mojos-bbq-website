@@ -38,7 +38,7 @@ export default function LocationCard({ island, area, hours, special, mapUrl, ima
           </a>
           <a 
             href="#" 
-            className="border border-slate-600 py-3 text-center text-[9px] font-bold tracking-widest text-slate-300 hover:border-white hover:text-white uppercase transition-all"
+            className="border border-slate-600 py-3 text-center text-[9px] font-black tracking-widest text-slate-300 hover:bg-white hover:text-black uppercase transition-all"
           >
             Contact
           </a>
