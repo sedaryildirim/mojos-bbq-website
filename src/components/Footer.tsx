@@ -22,17 +22,18 @@ export default function Footer() {
           [ ADMIN: CONNECT INSTAGRAM ]
         </button>
       </div>
-      <div className="flex space-x-12">
+      <div className="flex flex-wrap justify-center gap-x-12 gap-y-4">
         {[
           { name: 'Instagram', url: 'https://www.instagram.com/mojos.th/' },
-          { name: 'Facebook', url: '#' },
+          { name: 'Facebook', url: 'https://www.facebook.com/mojosbbqthailand/' },
+          { name: 'Contact', url: 'mailto:hello@mojos.th' },
           { name: 'Privacy Policy', url: '#' }
         ].map((link) => (
           <a 
             key={link.name}
             href={link.url}
-            target={link.url !== '#' ? "_blank" : undefined}
-            rel={link.url !== '#' ? "noopener noreferrer" : undefined}
+            target={link.url.startsWith('http') ? "_blank" : undefined}
+            rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
             className="font-mono text-[10px] tracking-[0.2em] text-slate-400 uppercase transition-colors hover:text-white"
           >
             {link.name}

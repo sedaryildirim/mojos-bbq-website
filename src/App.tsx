@@ -5,40 +5,50 @@ import LocationCard from "./components/LocationCard";
 import MenuSection from "./components/MenuSection";
 import PitFeed from "./components/PitFeed";
 import Footer from "./components/Footer";
+import ScrollReveal from "./components/ScrollReveal";
+import CustomCursor from "./components/CustomCursor";
 import { LOCATIONS, MENU } from "./constants";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-dark selection:bg-matte-orange selection:text-white">
+    <div className="min-h-screen bg-slate-dark selection:bg-matte-orange selection:text-white cursor-none">
+      <CustomCursor />
       <Navbar />
       
       <main>
         <Hero />
-        <Marquee />
+        <ScrollReveal direction="none">
+          <Marquee />
+        </ScrollReveal>
         
         {/* Locations Section */}
         <section id="locations" className="grid grid-cols-1 bg-slate-dark md:grid-cols-2 xl:grid-cols-4">
-          {LOCATIONS.map((loc) => (
-            <LocationCard key={loc.id} {...loc} />
+          {LOCATIONS.map((loc, idx) => (
+            <ScrollReveal key={loc.id} delay={idx * 0.1} direction="up">
+              <LocationCard {...loc} />
+            </ScrollReveal>
           ))}
         </section>
 
         {/* Menu Section */}
         <section id="menu" className="border-slate-light grid grid-cols-1 border-b bg-slate-dark lg:grid-cols-3">
           {MENU.map((item, idx) => (
-            <MenuSection 
-              key={item.id} 
-              id={item.id}
-              number={item.number}
-              title={item.title}
-              subtitle={item.subtitle}
-              sections={item.sections}
-              isDark={idx === 1}
-            />
+            <ScrollReveal key={item.id} delay={idx * 0.1} direction="none">
+              <MenuSection 
+                id={item.id}
+                number={item.number}
+                title={item.title}
+                subtitle={item.subtitle}
+                sections={item.sections}
+                isDark={idx === 1}
+              />
+            </ScrollReveal>
           ))}
         </section>
 
-        <PitFeed />
+        <ScrollReveal direction="up">
+          <PitFeed />
+        </ScrollReveal>
       </main>
 
       <Footer />

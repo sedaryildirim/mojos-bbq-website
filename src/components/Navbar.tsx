@@ -1,10 +1,16 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useScroll, useSpring } from "motion/react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { LOCATIONS, MENU } from "../constants";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   const navItems = ['Locations', 'Menu'];
 
@@ -13,6 +19,12 @@ export default function Navbar() {
   return (
     <>
       <nav className="border-slate-light sticky top-0 z-50 flex items-center justify-between border-b bg-slate-dark/95 backdrop-blur-sm px-6 py-4 text-[10px] tracking-[0.2em] uppercase md:text-xs">
+        {/* Scroll Progress Bar */}
+        <motion.div
+          className="absolute bottom-0 left-0 right-0 h-[2px] bg-matte-orange origin-left z-50"
+          style={{ scaleX }}
+        />
+        
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
