@@ -15,7 +15,7 @@ interface LocationProps {
 
 export default function LocationCard({ id, island, area, hours, special, mapUrl, embedUrl, image, orderText }: LocationProps) {
   return (
-    <div id={id} className="border-slate-light flex flex-col border-r bg-slate-dark scroll-mt-24">
+    <div id={id} className="border-slate-light flex flex-col border-r bg-slate-dark scroll-mt-24 h-full">
       <div className="border-slate-light flex flex-grow flex-col justify-between border-b p-10">
         <div className="md:min-h-[180px]">
           <h2 className="text-3xl font-heading font-bold tracking-tighter text-white uppercase leading-[1.1]">
@@ -46,27 +46,37 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
           </a>
         </div>
       </div>
-      <div className="border-slate-light relative h-[250px] overflow-hidden border-b bg-slate-medium/20">
-        <iframe
-          title={`Map of ${area}`}
-          src={embedUrl}
-          width="100%"
-          height="100%"
-          style={{ border: 0, filter: 'grayscale(1) invert(0.9) contrast(1.2)' }}
-          allowFullScreen={false}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="opacity-80 transition-opacity hover:opacity-100"
-        />
-      </div>
-      <div className="border-slate-light border-b bg-slate-medium/50 p-8">
-        <motion.a 
-          href="#"
-          whileTap={{ scale: 0.95 }}
-          className="bg-matte-orange block w-full py-4 text-center text-[11px] font-black tracking-[0.2em] text-white uppercase transition-all hover:bg-orange-500"
-        >
-          {orderText}
-        </motion.a>
+      
+      <div className="flex flex-col">
+        <div className="border-slate-light relative h-[250px] flex-grow overflow-hidden border-b bg-slate-medium/20 group">
+          <motion.div 
+            className="w-full h-full"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
+          >
+            <iframe
+              title={`Map of ${area}`}
+              src={embedUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: 'grayscale(1) invert(0.9) contrast(1.2)' }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="opacity-80 transition-opacity group-hover:opacity-100"
+            />
+          </motion.div>
+          <div className="absolute inset-0 pointer-events-none border border-white/5 z-10" />
+        </div>
+        <div className="border-slate-light border-b bg-slate-medium/50 p-8">
+          <motion.a 
+            href="#"
+            whileTap={{ scale: 0.95 }}
+            className="bg-matte-orange block w-full py-4 text-center text-[11px] font-black tracking-[0.2em] text-white uppercase transition-all hover:bg-orange-500"
+          >
+            {orderText}
+          </motion.a>
+        </div>
       </div>
     </div>
   );

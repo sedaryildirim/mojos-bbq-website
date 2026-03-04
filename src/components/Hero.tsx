@@ -1,16 +1,32 @@
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 
 export default function Hero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.2, 0.05]);
+
   return (
-    <section className="border-slate-light flex min-h-[60vh] flex-col items-center justify-center border-b bg-slate-medium px-4 text-center relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
+    <section 
+      ref={containerRef}
+      className="border-slate-light flex min-h-[60vh] flex-col items-center justify-center border-b bg-slate-medium px-4 text-center relative overflow-hidden"
+    >
+      <motion.div 
+        style={{ y, opacity }}
+        className="absolute inset-0 pointer-events-none"
+      >
         <img 
           src="https://image.pollinations.ai/prompt/abstract%20smoke%20fire%20texture%20dark%20industrial" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-110"
           referrerPolicy="no-referrer"
           alt="Smoke and fire texture"
         />
-      </div>
+      </motion.div>
       <motion.h1 
         initial={{ scale: 2, opacity: 0, filter: "blur(10px)" }}
         animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}

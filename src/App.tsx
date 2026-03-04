@@ -22,7 +22,7 @@ export default function App() {
         </ScrollReveal>
         
         {/* Locations Section */}
-        <section id="locations" className="grid grid-cols-1 bg-slate-dark md:grid-cols-2 xl:grid-cols-4 scroll-mt-24">
+        <section id="locations" className="grid grid-cols-1 bg-slate-dark md:grid-cols-2 xl:grid-cols-4 scroll-mt-24 border-b border-slate-light">
           {LOCATIONS.map((loc, idx) => (
             <ScrollReveal key={loc.id} delay={idx * 0.1} direction="up">
               <LocationCard {...loc} />
