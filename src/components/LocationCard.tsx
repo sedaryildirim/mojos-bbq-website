@@ -8,19 +8,21 @@ interface LocationProps {
   hours: string;
   special: string | null;
   mapUrl: string;
+  embedUrl: string;
   image: string;
   orderText: string;
 }
 
-export default function LocationCard({ id, island, area, hours, special, mapUrl, image, orderText }: LocationProps) {
+export default function LocationCard({ id, island, area, hours, special, mapUrl, embedUrl, image, orderText }: LocationProps) {
   return (
     <div id={id} className="border-slate-light flex flex-col border-r bg-slate-dark scroll-mt-24">
       <div className="border-slate-light flex flex-grow flex-col justify-between border-b p-10">
-        <div className="md:min-h-[160px]">
-          <h2 className="text-3xl font-bold tracking-tighter text-white uppercase leading-none">
-            {island}<br /><span className="text-matte-orange">{area}</span>
+        <div className="md:min-h-[180px]">
+          <h2 className="text-3xl font-bold tracking-tighter text-white uppercase leading-[1.1]">
+            {island}
+            <div className="text-matte-orange mt-1">{area}</div>
           </h2>
-          <div className="mt-6 space-y-1">
+          <div className="mt-10 space-y-2">
             <p className="font-mono text-[10px] tracking-tight text-slate-400 uppercase font-bold">{hours}</p>
             {special && (
               <p className="font-mono text-matte-orange text-[10px] tracking-tight uppercase font-bold">{special}</p>
@@ -44,12 +46,17 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
           </a>
         </div>
       </div>
-      <div className="border-slate-light relative h-[250px] overflow-hidden border-b group">
-        <img 
-          src={image} 
-          className="h-full w-full object-cover opacity-80 grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" 
-          referrerPolicy="no-referrer"
-          alt={area}
+      <div className="border-slate-light relative h-[250px] overflow-hidden border-b bg-slate-medium/20">
+        <iframe
+          title={`Map of ${area}`}
+          src={embedUrl}
+          width="100%"
+          height="100%"
+          style={{ border: 0, filter: 'grayscale(1) invert(0.9) contrast(1.2)' }}
+          allowFullScreen={false}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="opacity-80 transition-opacity hover:opacity-100"
         />
       </div>
       <div className="border-slate-light border-b bg-slate-medium/50 p-8">

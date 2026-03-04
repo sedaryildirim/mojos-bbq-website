@@ -31,16 +31,21 @@ export default function App() {
         </section>
 
         {/* Menu Section */}
-        <section id="menu" className="border-slate-light grid grid-cols-1 border-b bg-slate-dark lg:grid-cols-3">
+        <section id="menu" className="border-slate-light grid grid-cols-1 border-b bg-slate-dark lg:grid-cols-2 xl:grid-cols-4">
           {MENU.map((item, idx) => (
-            <ScrollReveal key={item.id} delay={idx * 0.1} direction="none">
+            <ScrollReveal 
+              key={item.id} 
+              delay={idx * 0.1} 
+              direction={item.id === 'sunday-roast' ? 'down' : 'none'}
+            >
               <MenuSection 
                 id={item.id}
                 number={item.number}
                 title={item.title}
                 subtitle={item.subtitle}
                 sections={item.sections}
-                isDark={idx === 1}
+                isDark={idx % 2 !== 0 && idx !== MENU.length - 1}
+                isAccent={item.id === 'sunday-roast'}
               />
             </ScrollReveal>
           ))}

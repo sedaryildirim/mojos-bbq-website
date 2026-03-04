@@ -129,7 +129,9 @@ export default function Navbar() {
                           transition={{ delay: (idx * 0.1) + (catIdx * 0.05) + 0.2 }}
                           href={`#${cat.id}`}
                           onClick={() => setIsOpen(false)}
-                          className="flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-slate-400 hover:text-matte-orange transition-colors"
+                          className={`flex items-center gap-2 text-sm font-bold tracking-widest uppercase transition-colors ${
+                            cat.id === 'sunday-roast' ? 'text-matte-orange' : 'text-slate-400 hover:text-matte-orange'
+                          }`}
                         >
                           <ChevronRight size={14} className="text-matte-orange" />
                           {cat.title}

@@ -5,7 +5,8 @@ export const LOCATIONS = [
     area: 'LAMAI',
     hours: 'Mon-Sat: 15:00 - 23:30',
     special: 'Sun Roast: 12:00 - 18:00',
-    mapUrl: 'https://maps.app.goo.gl/ZmZzquqm8FVQsHuSA',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.464107346757865,100.0434715411214',
+    embedUrl: 'https://maps.google.com/maps?q=9.464107346757865,100.0434715411214&t=&z=15&ie=UTF8&iwloc=&output=embed',
     image: 'https://image.pollinations.ai/prompt/Brutalistic%20high-contrast%20moody%20food%20photography%20of%20smoked%20beef%20brisket',
     orderText: 'ORDER LAMAI'
   },
@@ -15,7 +16,8 @@ export const LOCATIONS = [
     area: 'CHALOKLUM',
     hours: 'Daily: 12:00 - 22:30',
     special: 'Sun Roast: 12:00 - 18:00',
-    mapUrl: '#',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.786744855709996,100.00767679548328',
+    embedUrl: 'https://maps.google.com/maps?q=9.786744855709996,100.00767679548328&t=&z=15&ie=UTF8&iwloc=&output=embed',
     image: 'https://image.pollinations.ai/prompt/Southern%20Fried%20Chicken%20Wings%20on%20black%20metal%20tray%20moody',
     orderText: 'ORDER CHALOKLUM'
   },
@@ -25,7 +27,8 @@ export const LOCATIONS = [
     area: 'THONG SALA FOOD COURT',
     hours: 'Daily: 12:30 - 22:00',
     special: null,
-    mapUrl: '#',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.709672218820465,99.99110258345121',
+    embedUrl: 'https://maps.google.com/maps?q=9.709672218820465,99.99110258345121&t=&z=15&ie=UTF8&iwloc=&output=embed',
     image: 'https://image.pollinations.ai/prompt/Buttermilk%20chicken%20tenders%20industrial%20style',
     orderText: 'ORDER FOOD COURT'
   },
@@ -35,7 +38,8 @@ export const LOCATIONS = [
     area: 'BAN TAIN NIGHT MARKET',
     hours: 'Mon-Sun: 17:00 - 23:00',
     special: null,
-    mapUrl: '#',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.699976925868516,100.02452592762923',
+    embedUrl: 'https://maps.google.com/maps?q=9.699976925868516,100.02452592762923&t=&z=15&ie=UTF8&iwloc=&output=embed',
     image: 'https://image.pollinations.ai/prompt/Night%20market%20BBQ%20stall%20neon%20lights%20dark%20moody',
     orderText: 'ORDER NIGHT MARKET'
   }
@@ -110,6 +114,23 @@ export const MENU = [
           { name: 'HONEYCOMB MALT', price: 200 },
           { name: 'BROWNIE + CHOC', price: 200 },
           { name: 'SALTED CARAMEL', price: 180 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'sunday-roast',
+    number: '04',
+    title: 'SUNDAY ROAST',
+    subtitle: 'AVAILABLE SUNDAYS 12:00 - 18:00 // LAMAI & CHALOKLUM ONLY',
+    sections: [
+      {
+        items: [
+          { name: 'CHICKEN', price: 490 },
+          { name: 'LAMB', price: 590 },
+          { name: 'BEEF', price: 590 },
+          { name: 'MIXED', price: 590 },
+          { name: 'LITTLE MOJOS', price: 320 }
         ]
       }
     ]
