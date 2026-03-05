@@ -11,9 +11,10 @@ interface LocationProps {
   embedUrl: string;
   image: string;
   orderText: string;
+  deliveryUrl: string;
 }
 
-export default function LocationCard({ id, island, area, hours, special, mapUrl, embedUrl, image, orderText }: LocationProps) {
+export default function LocationCard({ id, island, area, hours, special, mapUrl, embedUrl, image, orderText, deliveryUrl }: LocationProps) {
   return (
     <div id={id} className="border-slate-light flex flex-col border-r bg-slate-dark scroll-mt-24 h-full">
       <div className="border-slate-light flex flex-grow flex-col justify-between border-b p-10">
@@ -49,28 +50,26 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
       
       <div className="flex flex-col">
         <div className="border-slate-light relative h-[250px] flex-grow overflow-hidden border-b bg-slate-medium/20 group">
-          <motion.div 
-            className="w-full h-full"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
-          >
+          <div className="w-full h-full">
             <iframe
               title={`Map of ${area}`}
               src={embedUrl}
               width="100%"
               height="100%"
-              style={{ border: 0, filter: 'grayscale(1) invert(0.9) contrast(1.2)' }}
+              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(0.8) contrast(1.2)' }}
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="opacity-80 transition-opacity group-hover:opacity-100"
+              className="opacity-90 transition-opacity group-hover:opacity-100"
             />
-          </motion.div>
+          </div>
           <div className="absolute inset-0 pointer-events-none border border-white/5 z-10" />
         </div>
         <div className="border-slate-light border-b bg-slate-medium/50 p-8">
           <motion.a 
-            href="#"
+            href={deliveryUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             whileTap={{ scale: 0.95 }}
             className="bg-matte-red block w-full py-4 text-center text-[11px] font-black tracking-[0.2em] text-white uppercase transition-all hover:bg-red-600"
           >

@@ -9,23 +9,28 @@ export default function Hero() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [0.2, 0.05]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 0.2]);
 
   return (
     <section 
       ref={containerRef}
-      className="border-slate-light flex min-h-[60vh] flex-col items-center justify-center border-b bg-slate-medium px-4 text-center relative overflow-hidden"
+      className="border-slate-light flex min-h-[70vh] flex-col items-center justify-center border-b bg-slate-dark px-4 text-center relative overflow-hidden"
     >
       <motion.div 
         style={{ y, opacity }}
         className="absolute inset-0 pointer-events-none"
       >
         <img 
-          src="https://image.pollinations.ai/prompt/abstract%20smoke%20fire%20texture%20dark%20industrial" 
-          className="w-full h-full object-cover scale-110"
+          src="https://storage.googleapis.com/generativeai-downloads/images/mojos_interior.jpg" 
+          className="w-full h-full object-cover scale-110 brightness-[0.4] contrast-[1.2]"
           referrerPolicy="no-referrer"
-          alt="Smoke and fire texture"
+          alt="Mojo's Restaurant Interior"
+          onError={(e) => {
+            // Fallback to a high-quality descriptive prompt if the direct link fails
+            (e.target as HTMLImageElement).src = "https://image.pollinations.ai/prompt/Dark%20moody%20restaurant%20interior%20at%20night%20with%20red%20neon%20sign%20Mojo's%20on%20the%20roof%20David%20Bowie%20mural%20on%20the%20left%20wall%20wooden%20tables%20grey%20chairs%20industrial%20aesthetic%20cinematic%20photography%20high%20resolution";
+          }}
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-slate-dark" />
       </motion.div>
       <motion.h1 
         initial={{ scale: 2, opacity: 0, filter: "blur(10px)" }}

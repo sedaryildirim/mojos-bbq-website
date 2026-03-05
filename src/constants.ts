@@ -8,7 +8,8 @@ export const LOCATIONS = [
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.464107346757865,100.0434715411214',
     embedUrl: 'https://maps.google.com/maps?q=9.464107346757865,100.0434715411214&t=&z=15&ie=UTF8&iwloc=&output=embed',
     image: 'https://image.pollinations.ai/prompt/Brutalistic%20high-contrast%20moody%20food%20photography%20of%20smoked%20beef%20brisket',
-    orderText: 'ORDER LAMAI'
+    orderText: 'ORDER LAMAI',
+    deliveryUrl: 'https://r.grab.com/g/6-20260305_173231_F8AD6EACD64A4405923AA30E3C5FE29D_MEXMPS-3-C72XAZBYFBUCFE'
   },
   {
     id: 'chaloklum',
@@ -19,7 +20,8 @@ export const LOCATIONS = [
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.786744855709996,100.00767679548328',
     embedUrl: 'https://maps.google.com/maps?q=9.786744855709996,100.00767679548328&t=&z=15&ie=UTF8&iwloc=&output=embed',
     image: 'https://image.pollinations.ai/prompt/Southern%20Fried%20Chicken%20Wings%20on%20black%20metal%20tray%20moody',
-    orderText: 'ORDER CHALOKLUM'
+    orderText: 'ORDER CHALOKLUM',
+    deliveryUrl: 'https://delivery-kpg.com/stores/mojos-chaloklum'
   },
   {
     id: 'food-court',
@@ -30,7 +32,8 @@ export const LOCATIONS = [
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.709672218820465,99.99110258345121',
     embedUrl: 'https://maps.google.com/maps?q=9.709672218820465,99.99110258345121&t=&z=15&ie=UTF8&iwloc=&output=embed',
     image: 'https://image.pollinations.ai/prompt/Buttermilk%20chicken%20tenders%20industrial%20style',
-    orderText: 'ORDER FOOD COURT'
+    orderText: 'ORDER FOOD COURT',
+    deliveryUrl: 'https://delivery-kpg.com/stores/mojos-thongsala'
   },
   {
     id: 'night-market',
@@ -41,7 +44,8 @@ export const LOCATIONS = [
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.699976925868516,100.02452592762923',
     embedUrl: 'https://maps.google.com/maps?q=9.699976925868516,100.02452592762923&t=&z=15&ie=UTF8&iwloc=&output=embed',
     image: 'https://image.pollinations.ai/prompt/Night%20market%20BBQ%20stall%20neon%20lights%20dark%20moody',
-    orderText: 'ORDER NIGHT MARKET'
+    orderText: 'ORDER NIGHT MARKET',
+    deliveryUrl: 'https://delivery-kpg.com/stores/mojos-baan-tai'
   }
 ];
 
