@@ -1,27 +1,23 @@
 import { motion, AnimatePresence } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function LoadingScreen() {
   const [progress, setProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const hideTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
-        const next = Math.min(prev + Math.random() * 15, 100);
-        if (next >= 100) {
+        if (prev >= 100) {
           clearInterval(interval);
-          hideTimeoutRef.current = setTimeout(() => setIsVisible(false), 500);
+          setTimeout(() => setIsVisible(false), 500);
+          return 100;
         }
-        return next;
+        return prev + Math.random() * 15;
       });
     }, 100);
 
-    return () => {
-      clearInterval(interval);
-      if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
-    };
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -38,7 +34,7 @@ export default function LoadingScreen() {
               <span>{Math.round(progress)}%</span>
             </div>
             <div className="h-[2px] w-full bg-slate-light overflow-hidden">
-              <motion.div
+              <motion.div 
                 className="h-full bg-matte-red"
                 initial={{ width: 0 }}
                 animate={{ width: `${progress}%` }}
@@ -46,7 +42,7 @@ export default function LoadingScreen() {
             </div>
             <div className="flex flex-col gap-1">
               <span className="font-mono text-[8px] text-slate-600 uppercase animate-pulse">
-                // Initializing Wood Fire Smoke...
+                // Initializing Fire & Smoke...
               </span>
               <span className="font-mono text-[8px] text-slate-600 uppercase animate-pulse delay-75">
                 // Calibrating Brisket Temps...

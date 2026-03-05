@@ -2,7 +2,7 @@ const MARQUEE_ITEMS = [
   "Authentic Low & Slow BBQ //",
   "Daily Smoked Brisket //",
   "Sunday Roast Starts 12:00 //",
-  "Ice Cold Craft Beer //",
+  "Ice Cold Beers //",
 ];
 
 export default function Marquee() {

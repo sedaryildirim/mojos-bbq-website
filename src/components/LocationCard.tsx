@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 
 interface LocationProps {
+  key?: string;
   id: string;
   island: string;
   area: string;
@@ -29,34 +30,18 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
             )}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="mt-8">
-          <a
-            href={mapUrl}
-            target="_blank"
-=======
-=======
->>>>>>> parent of c4ab469 (refactor: Update branding and location information)
-        <div className="mt-8 grid grid-cols-2 gap-2">
           <a 
             href={mapUrl} 
             target="_blank" 
->>>>>>> parent of c4ab469 (refactor: Update branding and location information)
             rel="noopener noreferrer"
-            className="border border-slate-600 py-3 text-center text-[9px] font-black tracking-widest text-slate-300 hover:bg-white hover:text-black uppercase transition-all"
+            className="border border-slate-600 block w-full py-3 text-center text-[9px] font-black tracking-widest text-slate-300 hover:bg-white hover:text-black uppercase transition-all"
           >
             Google Maps
           </a>
-          <a 
-            href="#" 
-            className="border border-slate-600 py-3 text-center text-[9px] font-black tracking-widest text-slate-300 hover:bg-white hover:text-black uppercase transition-all"
-          >
-            Contact
-          </a>
         </div>
       </div>
-
+      
       <div className="flex flex-col">
         <div className="border-slate-light relative h-[250px] flex-grow overflow-hidden border-b bg-slate-medium/20 group">
           <div className="w-full h-full">
@@ -75,7 +60,7 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
           <div className="absolute inset-0 pointer-events-none border border-white/5 z-10" />
         </div>
         <div className="border-slate-light border-b bg-slate-medium/50 p-8">
-          <motion.a
+          <motion.a 
             href={deliveryUrl}
             target="_blank"
             rel="noopener noreferrer"

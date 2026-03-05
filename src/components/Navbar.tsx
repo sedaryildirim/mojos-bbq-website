@@ -7,7 +7,6 @@ const NAV_LINKS = [
   { name: "Feed", href: "#gallery" },
   { name: "Reviews", href: "#reviews" },
   { name: "Locations", href: "#locations" },
-  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -24,10 +23,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
+      <nav 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
-            ? "bg-slate-dark/90 backdrop-blur-md border-b border-slate-light py-4"
+          isScrolled 
+            ? "bg-slate-dark/90 backdrop-blur-md border-b border-slate-light py-4" 
             : "bg-transparent py-8"
         }`}
       >
@@ -39,7 +38,7 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-12">
             {NAV_LINKS.map((link) => (
-              <a
+              <a 
                 key={link.name}
                 href={link.href}
                 className="font-mono text-[10px] font-bold tracking-[0.3em] text-slate-300 uppercase transition-colors hover:text-matte-red"
@@ -50,11 +49,9 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Toggle */}
-          <button
+          <button 
             className="md:hidden text-white p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -70,14 +67,10 @@ export default function Navbar() {
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed inset-0 z-[60] bg-slate-dark flex flex-col items-center justify-center p-8"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Navigation menu"
           >
-            <button
+            <button 
               className="absolute top-8 right-8 text-white p-2"
               onClick={() => setIsMobileMenuOpen(false)}
-              aria-label="Close menu"
             >
               <X size={32} />
             </button>
