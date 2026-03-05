@@ -30,11 +30,14 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="mt-8">
           <a
             href={mapUrl}
             target="_blank"
 =======
+=======
+>>>>>>> parent of c4ab469 (refactor: Update branding and location information)
         <div className="mt-8 grid grid-cols-2 gap-2">
           <a 
             href={mapUrl} 

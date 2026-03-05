@@ -44,6 +44,9 @@ export default function FoodGallery() {
       <SectionLabel 
         mainText="HERE'S WHAT TO EXPECT // OUR FOOD" 
         subText="EST. 2021 // WOOD FIRE SMOKE"
+<<<<<<< HEAD
+>>>>>>> parent of c4ab469 (refactor: Update branding and location information)
+=======
 >>>>>>> parent of c4ab469 (refactor: Update branding and location information)
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">

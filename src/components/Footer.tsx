@@ -23,10 +23,13 @@ export default function Footer() {
               <p className="font-mono text-[10px] leading-relaxed tracking-wider text-slate-400 uppercase">
                 Smoked in the tropics.<br />
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Fire & Smoke // Koh Phangan // Koh Samui.<br />
                 {/* Fixed: was "Established 2024" but copyright said 2026 — align to actual founding year */}
                 Established 2021.
 =======
+=======
+>>>>>>> parent of c4ab469 (refactor: Update branding and location information)
                 Wood fire smoke & Gulf of Thailand vibes.<br />
                 Established 2024.
 >>>>>>> parent of c4ab469 (refactor: Update branding and location information)
@@ -82,12 +85,17 @@ export default function Footer() {
             <h4 className="font-mono text-[11px] font-bold tracking-[0.3em] text-slate-300 uppercase">Support</h4>
             <div className="flex flex-col gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* Replace the email below with your real contact address */}
               <a
                 href="mailto:hello@mojos-bbq.com"
                 className="font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white"
               >
                 hello@mojos-bbq.com
+=======
+              <a href="mailto:hello@mojos.th" className="font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white">
+                hello@mojos.th
+>>>>>>> parent of c4ab469 (refactor: Update branding and location information)
 =======
               <a href="mailto:hello@mojos.th" className="font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white">
                 hello@mojos.th
