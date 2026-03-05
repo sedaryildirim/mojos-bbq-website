@@ -7,10 +7,10 @@
   --font-heading: "Space Grotesk", sans-serif;
   --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-matte-orange: #f97316;
-  --color-slate-dark: #0f172a;
-  --color-slate-medium: #1e293b;
-  --color-slate-light: #334155;
+  --color-matte-red: #e11d48;
+  --color-slate-dark: #0a0a0a;
+  --color-slate-medium: #171717;
+  --color-slate-light: #262626;
 
   @keyframes marquee {
     0% { transform: translateX(0); }
@@ -38,5 +38,5 @@ html {
 }
 
 body {
-  @apply bg-slate-dark text-white antialiased selection:bg-matte-orange selection:text-white;
+  @apply bg-slate-dark text-white antialiased selection:bg-matte-red selection:text-white;
 }

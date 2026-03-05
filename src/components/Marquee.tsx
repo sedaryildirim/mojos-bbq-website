@@ -7,7 +7,7 @@ const MARQUEE_ITEMS = [
 
 export default function Marquee() {
   return (
-    <div className="border-slate-light overflow-hidden border-b bg-matte-orange py-3 text-white">
+    <div className="border-slate-light overflow-hidden border-b bg-matte-red py-3 text-white">
       <div className="animate-marquee whitespace-nowrap">
         {[...Array(4)].map((_, i) => (
           <div key={i} className="flex">

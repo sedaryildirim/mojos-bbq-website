@@ -70,7 +70,7 @@ export default function Navbar() {
       <nav className="border-slate-light sticky top-0 z-[100] flex items-center justify-between border-b bg-slate-dark/95 backdrop-blur-sm px-6 py-4 text-[10px] tracking-[0.2em] uppercase md:text-xs">
         {/* Scroll Progress Bar */}
         <motion.div
-          className="absolute bottom-0 left-0 right-0 h-[2px] bg-matte-orange origin-left z-50"
+          className="absolute bottom-0 left-0 right-0 h-[2px] bg-matte-red origin-left z-50"
           style={{ scaleX }}
         />
         
@@ -81,7 +81,7 @@ export default function Navbar() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             setIsOpen(false);
           }}
-          className="text-matte-orange text-2xl font-display tracking-tighter uppercase italic cursor-pointer"
+          className="text-matte-red text-2xl font-display tracking-tighter uppercase italic cursor-pointer"
         >
           Mojos
         </motion.div>
@@ -99,8 +99,8 @@ export default function Navbar() {
                 key={item}
                 href={`#${id}`}
                 onClick={(e) => handleNavClick(e, id)}
-                whileHover={{ color: '#f97316' }}
-                className={`transition-colors duration-300 ${isActive ? 'text-matte-orange' : 'text-white'}`}
+                whileHover={{ color: '#e11d48' }}
+                className={`transition-colors duration-300 ${isActive ? 'text-matte-red' : 'text-white'}`}
               >
                 {item}
               </motion.a>
@@ -119,7 +119,7 @@ export default function Navbar() {
           </motion.div>
           <button 
             onClick={toggleMenu}
-            className="text-white hover:text-matte-orange transition-colors p-1"
+            className="text-white hover:text-matte-red transition-colors p-1"
             aria-label="Toggle Menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -167,7 +167,7 @@ export default function Navbar() {
                     href={`#${item.toLowerCase()}`}
                     onClick={(e) => handleNavClick(e, item.toLowerCase())}
                     className={`text-4xl font-display tracking-tighter uppercase italic transition-colors ${
-                      activeSection === item.toLowerCase() ? 'text-matte-orange' : 'text-white hover:text-matte-orange'
+                      activeSection === item.toLowerCase() ? 'text-matte-red' : 'text-white hover:text-matte-red'
                     }`}
                   >
                     {item}
@@ -185,10 +185,10 @@ export default function Navbar() {
                           href={`#${loc.id}`}
                           onClick={(e) => handleNavClick(e, loc.id)}
                           className={`flex items-center gap-2 text-sm font-bold tracking-widest uppercase transition-colors ${
-                            activeSection === loc.id ? 'text-matte-orange' : 'text-slate-400 hover:text-matte-orange'
+                            activeSection === loc.id ? 'text-matte-red' : 'text-slate-400 hover:text-matte-red'
                           }`}
                         >
-                          <ChevronRight size={14} className="text-matte-orange" />
+                          <ChevronRight size={14} className="text-matte-red" />
                           {loc.area}
                         </motion.a>
                       ))}
@@ -207,10 +207,10 @@ export default function Navbar() {
                           href={`#${cat.id}`}
                           onClick={(e) => handleNavClick(e, cat.id)}
                           className={`flex items-center gap-2 text-sm font-bold tracking-widest uppercase transition-colors ${
-                            activeSection === cat.id ? 'text-matte-orange' : 'text-slate-400 hover:text-matte-orange'
+                            activeSection === cat.id ? 'text-matte-red' : 'text-slate-400 hover:text-matte-red'
                           }`}
                         >
-                          <ChevronRight size={14} className="text-matte-orange" />
+                          <ChevronRight size={14} className="text-matte-red" />
                           {cat.title}
                         </motion.a>
                       ))}

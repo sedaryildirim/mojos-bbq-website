@@ -24,7 +24,7 @@ export default function MenuSection({ id, number, title, subtitle, sections, isD
   return (
     <div id={id} className={`relative border-slate-light border-r p-12 scroll-mt-24 transition-all duration-700 overflow-hidden ${
       isAccent 
-        ? 'bg-matte-orange text-white shadow-[0_0_60px_rgba(242,125,38,0.3)] z-20' 
+        ? 'bg-matte-red text-white shadow-[0_0_60px_rgba(225,29,72,0.3)] z-20' 
         : isDark ? 'bg-slate-medium/30' : ''
     }`}>
       {isAccent && (
@@ -50,14 +50,14 @@ export default function MenuSection({ id, number, title, subtitle, sections, isD
       
       {isAccent && (
         <div className="absolute top-0 right-0 overflow-hidden w-32 h-32 pointer-events-none">
-          <div className="absolute top-6 -right-8 rotate-45 bg-white text-matte-orange font-mono text-[10px] font-black px-10 py-1 tracking-widest uppercase shadow-lg">
+          <div className="absolute top-6 -right-8 rotate-45 bg-white text-matte-red font-mono text-[10px] font-black px-10 py-1 tracking-widest uppercase shadow-lg">
             SPECIAL
           </div>
         </div>
       )}
 
       <div className="relative z-10">
-        <span className={`font-mono text-[10px] font-bold tracking-widest uppercase ${isAccent ? 'text-white' : 'text-matte-orange'}`}>
+        <span className={`font-mono text-[10px] font-bold tracking-widest uppercase ${isAccent ? 'text-white' : 'text-matte-red'}`}>
           // {number}. {isAccent ? 'THE LEGENDARY' : ''}
         </span>
         <h3 className={`mt-1 font-heading font-bold tracking-tighter uppercase leading-none ${
@@ -89,7 +89,7 @@ export default function MenuSection({ id, number, title, subtitle, sections, isD
                 className={`flex justify-between items-center border-b pb-2 group cursor-default transition-all duration-300 ${
                   isAccent 
                     ? 'border-white/20 hover:border-white hover:bg-white/5 px-2 -mx-2 rounded' 
-                    : 'border-slate-light hover:border-matte-orange/50'
+                    : 'border-slate-light hover:border-matte-red/50'
                 }`}
               >
                 <div className="flex items-center gap-2">
@@ -98,10 +98,10 @@ export default function MenuSection({ id, number, title, subtitle, sections, isD
                       initial: { opacity: 0, scale: 0, width: 0 },
                       hover: { opacity: 1, scale: 1, width: 6 }
                     }}
-                    className={`h-1.5 rounded-full ${isAccent ? 'bg-white' : 'bg-matte-orange'}`}
+                    className={`h-1.5 rounded-full ${isAccent ? 'bg-white' : 'bg-matte-red'}`}
                   />
                   <span className={`text-sm font-bold uppercase transition-colors ${
-                    isAccent ? 'text-white group-hover:text-white' : 'text-white group-hover:text-matte-orange'
+                    isAccent ? 'text-white group-hover:text-white' : 'text-white group-hover:text-matte-red'
                   }`}>
                     {item.name}
                   </span>
@@ -111,7 +111,7 @@ export default function MenuSection({ id, number, title, subtitle, sections, isD
                     initial: { scale: 1 },
                     hover: { scale: 1.1 }
                   }}
-                  className={`font-mono font-bold origin-right ${isAccent ? 'text-white' : 'text-matte-orange'}`}
+                  className={`font-mono font-bold origin-right ${isAccent ? 'text-white' : 'text-matte-red'}`}
                 >
                   {item.price}
                 </motion.span>

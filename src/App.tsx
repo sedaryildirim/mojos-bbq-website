@@ -3,14 +3,13 @@ import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import LocationCard from "./components/LocationCard";
 import MenuSection from "./components/MenuSection";
-import PitFeed from "./components/PitFeed";
 import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
 import { LOCATIONS, MENU } from "./constants";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-dark selection:bg-matte-orange selection:text-white">
+    <div className="min-h-screen bg-slate-dark selection:bg-matte-red selection:text-white">
       <Navbar />
       
       <main>
@@ -19,15 +18,6 @@ export default function App() {
           <Marquee />
         </ScrollReveal>
         
-        {/* Locations Section */}
-        <section id="locations" className="grid grid-cols-1 bg-slate-dark md:grid-cols-2 xl:grid-cols-4 scroll-mt-24 border-b border-slate-light">
-          {LOCATIONS.map((loc, idx) => (
-            <ScrollReveal key={loc.id} delay={idx * 0.1} direction="up">
-              <LocationCard {...loc} />
-            </ScrollReveal>
-          ))}
-        </section>
-
         {/* Menu Section */}
         <section id="menu" className="border-slate-light grid grid-cols-1 border-b bg-slate-dark lg:grid-cols-2 xl:grid-cols-4 scroll-mt-24">
           {MENU.map((item, idx) => (
@@ -49,9 +39,14 @@ export default function App() {
           ))}
         </section>
 
-        <ScrollReveal direction="up">
-          <PitFeed />
-        </ScrollReveal>
+        {/* Locations Section */}
+        <section id="locations" className="grid grid-cols-1 bg-slate-dark md:grid-cols-2 xl:grid-cols-4 scroll-mt-24 border-b border-slate-light">
+          {LOCATIONS.map((loc, idx) => (
+            <ScrollReveal key={loc.id} delay={idx * 0.1} direction="up">
+              <LocationCard {...loc} />
+            </ScrollReveal>
+          ))}
+        </section>
       </main>
 
       <Footer />

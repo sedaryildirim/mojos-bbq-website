@@ -20,12 +20,12 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
         <div className="md:min-h-[180px]">
           <h2 className="text-3xl font-heading font-bold tracking-tighter text-white uppercase leading-[1.1]">
             {island}
-            <div className="text-matte-orange mt-1">{area}</div>
+            <div className="text-matte-red mt-1">{area}</div>
           </h2>
           <div className="mt-10 space-y-2">
             <p className="font-mono text-[10px] tracking-tight text-slate-400 uppercase font-bold">{hours}</p>
             {special && (
-              <p className="font-mono text-matte-orange text-[10px] tracking-tight uppercase font-bold">{special}</p>
+              <p className="font-mono text-matte-red text-[10px] tracking-tight uppercase font-bold">{special}</p>
             )}
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
           <motion.a 
             href="#"
             whileTap={{ scale: 0.95 }}
-            className="bg-matte-orange block w-full py-4 text-center text-[11px] font-black tracking-[0.2em] text-white uppercase transition-all hover:bg-orange-500"
+            className="bg-matte-red block w-full py-4 text-center text-[11px] font-black tracking-[0.2em] text-white uppercase transition-all hover:bg-red-600"
           >
             {orderText}
           </motion.a>

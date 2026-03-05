@@ -1,47 +1,114 @@
-import { Instagram, Facebook } from "lucide-react";
+import { Instagram, Facebook, ArrowUpRight } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function Footer() {
-  const handleConnectInstagram = async () => {
-    try {
-      const response = await fetch('/api/auth/instagram/url');
-      const { url } = await response.json();
-      window.open(url, 'instagram_oauth', 'width=600,height=700');
-    } catch (error) {
-      console.error('Failed to get auth URL', error);
-    }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="border-slate-light flex flex-col items-center justify-between gap-10 border-t bg-slate-dark p-16 md:flex-row">
-      <div className="flex flex-col gap-2">
-        <div className="font-mono text-[10px] tracking-widest text-slate-500 uppercase">
-          © 2026 MOJOS THAILAND // SMOKED IN THE TROPICS
-        </div>
-        <button 
-          onClick={handleConnectInstagram}
-          className="font-mono text-[8px] text-left tracking-widest text-slate-700 uppercase hover:text-matte-orange transition-colors"
-        >
-          [ ADMIN: CONNECT INSTAGRAM ]
-        </button>
+    <footer className="relative border-t border-slate-light bg-slate-dark overflow-hidden">
+      {/* Background Texture Overlay */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay">
+        <img 
+          src="https://image.pollinations.ai/prompt/dark%20charcoal%20brushed%20metal%20texture%20industrial%20noise" 
+          className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+          alt=""
+        />
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-        {[
-          { name: 'Instagram', url: 'https://www.instagram.com/mojos.th/', icon: <Instagram size={16} strokeWidth={1.5} /> },
-          { name: 'Facebook', url: 'https://www.facebook.com/mojosbbqthailand/', icon: <Facebook size={16} strokeWidth={1.5} /> },
-          { name: 'Contact', url: 'mailto:hello@mojos.th' },
-          { name: 'Privacy Policy', url: '#' }
-        ].map((link) => (
-          <a 
-            key={link.name}
-            href={link.url}
-            target={link.url.startsWith('http') ? "_blank" : undefined}
-            rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-            className="font-mono text-[10px] tracking-[0.2em] text-slate-400 uppercase transition-all duration-300 hover:text-white hover:scale-110 flex items-center justify-center"
-            aria-label={link.name}
-          >
-            {link.icon || link.name}
-          </a>
-        ))}
+
+      {/* Large Watermark Branding */}
+      <div className="absolute -bottom-10 -left-10 pointer-events-none select-none opacity-[0.02]">
+        <span className="font-display text-[30vw] leading-none uppercase italic text-white">
+          Mojos
+        </span>
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-8 py-24 md:py-32">
+        <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-4">
+          {/* Brand Column */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h3 className="font-display text-4xl uppercase italic text-matte-red">Mojos</h3>
+              <p className="font-mono text-[10px] leading-relaxed tracking-wider text-slate-400 uppercase">
+                Smoked in the tropics.<br />
+                Wood fire smoke & Gulf of Thailand vibes.<br />
+                Established 2024.
+              </p>
+            </div>
+            <button 
+              onClick={scrollToTop}
+              className="group flex items-center gap-2 font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white"
+            >
+              Back to top <ArrowUpRight size={12} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+            </button>
+          </div>
+
+          {/* Navigation Column */}
+          <div className="space-y-6">
+            <h4 className="font-mono text-[11px] font-bold tracking-[0.3em] text-slate-300 uppercase">Explore</h4>
+            <nav className="flex flex-col gap-4">
+              {['Menu', 'Locations'].map((item) => (
+                <a 
+                  key={item}
+                  href={`#${item.toLowerCase().replace(' ', '-')}`}
+                  className="font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-matte-red"
+                >
+                  {item}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Social Column */}
+          <div className="space-y-6">
+            <h4 className="font-mono text-[11px] font-bold tracking-[0.3em] text-slate-300 uppercase">Connect</h4>
+            <div className="flex flex-col gap-4">
+              {[
+                { name: 'Instagram', url: 'https://www.instagram.com/mojos.th/', icon: <Instagram size={14} /> },
+                { name: 'Facebook', url: 'https://www.facebook.com/mojosbbqthailand/', icon: <Facebook size={14} /> },
+              ].map((link) => (
+                <a 
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white"
+                >
+                  {link.icon} {link.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Legal/Admin Column */}
+          <div className="space-y-6">
+            <h4 className="font-mono text-[11px] font-bold tracking-[0.3em] text-slate-300 uppercase">Support</h4>
+            <div className="flex flex-col gap-4">
+              <a href="mailto:hello@mojos.th" className="font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white">
+                hello@mojos.th
+              </a>
+              <a href="#" className="font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white">
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-24 border-t border-slate-light/30 pt-12">
+          <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+            <div className="font-mono text-[9px] tracking-[0.3em] text-slate-600 uppercase">
+              © 2026 MOJOS THAILAND // ALL RIGHTS RESERVED
+            </div>
+            <div className="flex gap-8">
+              <span className="font-mono text-[9px] tracking-[0.3em] text-slate-700 uppercase">
+                Designed for the heat
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
