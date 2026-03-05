@@ -48,7 +48,7 @@ export default function RoastCountdown() {
             The Legend Returns
           </h2>
           <p className="font-mono text-[10px] tracking-[0.4em] text-white/80 uppercase mt-2">
-            // EVERY SUNDAY FROM 12PM // LAMAI & BAAN TAI //
+            // EVERY SUNDAY FROM 12PM // LAMAI & CHALOKLUM //
           </p>
         </div>
 

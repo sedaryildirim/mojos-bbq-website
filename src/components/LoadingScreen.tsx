@@ -30,7 +30,7 @@ export default function LoadingScreen() {
         >
           <div className="relative w-64 space-y-4">
             <div className="flex justify-between font-mono text-[10px] tracking-widest text-slate-500 uppercase">
-              <span>System Booting</span>
+              <span>Smashing Patties</span>
               <span>{Math.round(progress)}%</span>
             </div>
             <div className="h-[2px] w-full bg-slate-light overflow-hidden">

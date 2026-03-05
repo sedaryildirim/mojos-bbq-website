@@ -28,8 +28,8 @@ export default function App() {
         
         {/* Menu Section */}
         <SectionLabel 
-          mainText="THE MENU // WOOD FIRE & SMOKE" 
-          subText="AUTHENTIC BBQ // CRAFTED WITH PASSION"
+          mainText="THE MENU // FIRE & SMOKE" 
+          subText="AUTHENTIC BURGERS // CRAFTED WITH PASSION"
         />
         <section id="menu" className="border-slate-light grid grid-cols-1 border-b bg-slate-dark lg:grid-cols-2 xl:grid-cols-4 scroll-mt-24">
           {MENU.map((item, idx) => (
