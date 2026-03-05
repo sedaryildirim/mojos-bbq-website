@@ -33,7 +33,7 @@ export default function Footer() {
               <h3 className="font-display text-4xl uppercase italic text-matte-red">Mojos</h3>
               <p className="font-mono text-[10px] leading-relaxed tracking-wider text-slate-400 uppercase">
                 Smoked in the tropics.<br />
-                Wood fire smoke & Gulf of Thailand vibes.<br />
+                Fire & Smoke // Koh Phangan // Koh Samui vibes.<br />
                 Established 2024.
               </p>
             </div>
@@ -66,8 +66,8 @@ export default function Footer() {
             <h4 className="font-mono text-[11px] font-bold tracking-[0.3em] text-slate-300 uppercase">Connect</h4>
             <div className="flex flex-col gap-4">
               {[
-                { name: 'Instagram', url: 'https://www.instagram.com/mojos.th/', icon: <Instagram size={14} /> },
-                { name: 'Facebook', url: 'https://www.facebook.com/mojosbbqthailand/', icon: <Facebook size={14} /> },
+                { name: 'Instagram', handle: '@mojos.th', url: 'https://www.instagram.com/mojos.th/', icon: <Instagram size={14} /> },
+                { name: 'Facebook', handle: 'mojos.th', url: 'https://www.facebook.com/mojos.th/', icon: <Facebook size={14} /> },
               ].map((link) => (
                 <a 
                   key={link.name}
@@ -76,7 +76,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white"
                 >
-                  {link.icon} {link.name}
+                  {link.icon} <span className="text-slate-300">{link.name}</span> <span className="text-slate-600">//</span> {link.handle}
                 </a>
               ))}
             </div>
@@ -86,9 +86,9 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="font-mono text-[11px] font-bold tracking-[0.3em] text-slate-300 uppercase">Support</h4>
             <div className="flex flex-col gap-4">
-              <a href="mailto:hello@mojos.th" className="font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white">
-                hello@mojos.th
-              </a>
+              <span className="font-mono text-[10px] tracking-widest text-slate-500 uppercase">
+                contact: TBC
+              </span>
               <a href="#" className="font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white">
                 Privacy Policy
               </a>
