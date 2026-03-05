@@ -56,7 +56,7 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
               src={embedUrl}
               width="100%"
               height="100%"
-              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(0.8) contrast(1.2)' }}
+              style={{ border: 0, filter: 'grayscale(1) invert(0.9) contrast(1.2)' }}
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
