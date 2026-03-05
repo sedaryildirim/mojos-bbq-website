@@ -25,6 +25,7 @@ export default function App() {
               key={item.id} 
               delay={idx * 0.1} 
               direction={item.id === 'sunday-roast' ? 'down' : 'none'}
+              className="h-full"
             >
               <MenuSection 
                 id={item.id}
@@ -42,7 +43,7 @@ export default function App() {
         {/* Locations Section */}
         <section id="locations" className="grid grid-cols-1 bg-slate-dark md:grid-cols-2 xl:grid-cols-4 scroll-mt-24 border-b border-slate-light">
           {LOCATIONS.map((loc, idx) => (
-            <ScrollReveal key={loc.id} delay={idx * 0.1} direction="up">
+            <ScrollReveal key={loc.id} delay={idx * 0.1} direction="up" className="h-full">
               <LocationCard {...loc} />
             </ScrollReveal>
           ))}

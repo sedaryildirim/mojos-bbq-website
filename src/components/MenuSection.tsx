@@ -22,11 +22,18 @@ interface MenuSectionProps {
 
 export default function MenuSection({ id, number, title, subtitle, sections, isDark, isAccent }: MenuSectionProps) {
   return (
-    <div id={id} className={`relative border-slate-light border-r p-12 scroll-mt-24 transition-all duration-700 overflow-hidden ${
+    <div id={id} className={`relative border-slate-light border-r p-12 scroll-mt-24 transition-all duration-700 overflow-hidden h-full flex flex-col ${
       isAccent 
         ? 'bg-matte-red text-white shadow-[0_0_60px_rgba(225,29,72,0.3)] z-20' 
         : isDark ? 'bg-slate-medium/30' : ''
     }`}>
+      {/* Background Watermark */}
+      <div className="absolute -bottom-10 -left-10 pointer-events-none select-none opacity-[0.02] z-0">
+        <span className="font-display text-[150px] leading-none uppercase italic text-white whitespace-nowrap">
+          {title}
+        </span>
+      </div>
+
       {isAccent && (
         <>
           <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ 
