@@ -4,7 +4,11 @@ import Marquee from "./components/Marquee";
 import LocationCard from "./components/LocationCard";
 import MenuSection from "./components/MenuSection";
 import FoodGallery from "./components/FoodGallery";
+import WallOfFlame from "./components/WallOfFlame";
+import RoastCountdown from "./components/RoastCountdown";
+import ContactForm from "./components/ContactForm";
 import SectionLabel from "./components/SectionLabel";
+import LoadingScreen from "./components/LoadingScreen";
 import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
 import { LOCATIONS, MENU } from "./constants";
@@ -12,6 +16,7 @@ import { LOCATIONS, MENU } from "./constants";
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-dark selection:bg-matte-red selection:text-white">
+      <LoadingScreen />
       <Navbar />
       
       <main>
@@ -19,6 +24,8 @@ export default function App() {
         <ScrollReveal direction="none">
           <Marquee />
         </ScrollReveal>
+
+        <RoastCountdown />
         
         {/* Menu Section */}
         <SectionLabel 
@@ -49,6 +56,8 @@ export default function App() {
         
         <FoodGallery />
 
+        <WallOfFlame />
+
         {/* Locations Section */}
         <SectionLabel 
           mainText="WHERE WE ARE // FIND A MOJO'S" 
@@ -61,6 +70,8 @@ export default function App() {
             </ScrollReveal>
           ))}
         </section>
+
+        <ContactForm />
       </main>
 
       <Footer />
