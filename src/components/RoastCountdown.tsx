@@ -7,18 +7,21 @@ export default function RoastCountdown() {
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date();
-      // Next Sunday at 12:00 PM
-      const nextSunday = new Date();
-      nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7);
+
+      // Build a candidate "this Sunday at 12:00" date
+      const nextSunday = new Date(now);
+      const daysUntilSunday = (7 - now.getDay()) % 7;
+      nextSunday.setDate(now.getDate() + daysUntilSunday);
+      // Set time BEFORE comparing so the check is accurate
       nextSunday.setHours(12, 0, 0, 0);
 
-      // If it's already past Sunday 12pm, move to next Sunday
-      if (now > nextSunday) {
+      // If we're already past Sunday 12pm (or it's Sunday and past 12pm), jump to next week
+      if (now >= nextSunday) {
         nextSunday.setDate(nextSunday.getDate() + 7);
       }
 
       const difference = nextSunday.getTime() - now.getTime();
-      
+
       setTimeLeft({
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
@@ -60,7 +63,7 @@ export default function RoastCountdown() {
             { label: "Secs", value: timeLeft.seconds },
           ].map((item) => (
             <div key={item.label} className="flex flex-col items-center">
-              <motion.span 
+              <motion.span
                 key={item.value}
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
