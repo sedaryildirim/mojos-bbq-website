@@ -54,6 +54,7 @@ export const MENU = [
     id: 'starters',
     number: '01',
     title: 'KICK STARTERS',
+    watermark: 'STARTERS',
     sections: [
       {
         name: 'WINGS & THINGS',
@@ -85,6 +86,7 @@ export const MENU = [
     id: 'burgers',
     number: '02',
     title: 'BURGERS',
+    watermark: 'BURGERS',
     subtitle: 'ADD FRIES FOR 80',
     sections: [
       {
@@ -104,6 +106,7 @@ export const MENU = [
     id: 'sweets',
     number: '03',
     title: 'THE SWEET STUFF',
+    watermark: 'DESSERTS',
     sections: [
       {
         name: 'DESSERTS',
@@ -126,6 +129,7 @@ export const MENU = [
     id: 'sunday-roast',
     number: '04',
     title: 'SUNDAY ROAST',
+    watermark: 'ROAST',
     subtitle: 'AVAILABLE SUNDAYS 12:00 - 18:00 // LAMAI & CHALOKLUM ONLY',
     sections: [
       {

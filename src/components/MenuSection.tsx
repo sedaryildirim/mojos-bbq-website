@@ -11,6 +11,7 @@ interface MenuSectionProps {
   id: string;
   number: string;
   title: string;
+  watermark?: string;
   subtitle?: string;
   sections: {
     name?: string;
@@ -20,7 +21,7 @@ interface MenuSectionProps {
   isAccent?: boolean;
 }
 
-export default function MenuSection({ id, number, title, subtitle, sections, isDark, isAccent }: MenuSectionProps) {
+export default function MenuSection({ id, number, title, watermark, subtitle, sections, isDark, isAccent }: MenuSectionProps) {
   return (
     <div id={id} className={`relative border-slate-light border-r p-12 scroll-mt-24 transition-all duration-700 overflow-hidden h-full flex flex-col ${
       isAccent 
@@ -28,9 +29,9 @@ export default function MenuSection({ id, number, title, subtitle, sections, isD
         : isDark ? 'bg-slate-medium/30' : ''
     }`}>
       {/* Background Watermark */}
-      <div className="absolute -bottom-10 -left-10 pointer-events-none select-none opacity-[0.02] z-0">
-        <span className="font-display text-[150px] leading-none uppercase italic text-white whitespace-nowrap">
-          {title}
+      <div className="absolute -bottom-4 -left-4 pointer-events-none select-none opacity-[0.04] z-0">
+        <span className="font-display text-[80px] leading-none uppercase italic text-white whitespace-nowrap">
+          {watermark || title}
         </span>
       </div>
 

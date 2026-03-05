@@ -21,7 +21,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
       >
         <img 
-          src="https://storage.googleapis.com/generativeai-downloads/images/mojos_interior.jpg" 
+          src="https://i.imgur.com/gNL13PE.jpeg" 
           className="w-full h-full object-cover scale-110 brightness-[0.4] contrast-[1.2]"
           referrerPolicy="no-referrer"
           alt="Mojo's Restaurant Interior"

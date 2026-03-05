@@ -3,6 +3,8 @@ import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import LocationCard from "./components/LocationCard";
 import MenuSection from "./components/MenuSection";
+import FoodGallery from "./components/FoodGallery";
+import SectionLabel from "./components/SectionLabel";
 import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
 import { LOCATIONS, MENU } from "./constants";
@@ -19,6 +21,10 @@ export default function App() {
         </ScrollReveal>
         
         {/* Menu Section */}
+        <SectionLabel 
+          mainText="THE MENU // WOOD FIRE & SMOKE" 
+          subText="AUTHENTIC BBQ // CRAFTED WITH PASSION"
+        />
         <section id="menu" className="border-slate-light grid grid-cols-1 border-b bg-slate-dark lg:grid-cols-2 xl:grid-cols-4 scroll-mt-24">
           {MENU.map((item, idx) => (
             <ScrollReveal 
@@ -31,6 +37,7 @@ export default function App() {
                 id={item.id}
                 number={item.number}
                 title={item.title}
+                watermark={item.watermark}
                 subtitle={item.subtitle}
                 sections={item.sections}
                 isDark={idx % 2 !== 0 && idx !== MENU.length - 1}
@@ -39,8 +46,14 @@ export default function App() {
             </ScrollReveal>
           ))}
         </section>
+        
+        <FoodGallery />
 
         {/* Locations Section */}
+        <SectionLabel 
+          mainText="WHERE WE ARE // FIND A MOJO'S" 
+          subText="4 LOCATIONS // GULF OF THAILAND"
+        />
         <section id="locations" className="grid grid-cols-1 bg-slate-dark md:grid-cols-2 xl:grid-cols-4 scroll-mt-24 border-b border-slate-light">
           {LOCATIONS.map((loc, idx) => (
             <ScrollReveal key={loc.id} delay={idx * 0.1} direction="up" className="h-full">
