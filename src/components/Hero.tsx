@@ -49,7 +49,7 @@ export default function Hero() {
         transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
         className="font-mono mt-8 text-[10px] tracking-[0.4em] text-slate-300 relative z-10 font-bold uppercase"
       >
-        // FIRE & SMOKE // KOH PHANGAN // KOH SAMUI //
+        // WOOD FIRE SMOKE // GULF OF THAILAND //
       </motion.p>
     </section>
   );

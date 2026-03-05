@@ -38,7 +38,7 @@ export const LOCATIONS = [
   {
     id: 'night-market',
     island: 'KOH PHANGAN',
-    area: 'BAN TAI NIGHT MARKET',
+    area: 'BAN TAIN NIGHT MARKET',
     hours: 'Mon-Sun: 17:00 - 23:00',
     special: null,
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.699976925868516,100.02452592762923',

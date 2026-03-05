@@ -4,40 +4,28 @@ import SectionLabel from "./SectionLabel";
 
 const REVIEWS = [
   {
-    name: "Michael Gorodi",
-    text: "Been here 3+ years and there’s very few restaurants on this island that are actually worth it… I just added Mojos to my list. Insanely good food from start to finish - generous portions and top service. Worth every penny!",
+    name: "Alex M.",
+    text: "The brisket is life-changing. Best BBQ I've had outside of Texas, and the industrial vibe is spot on.",
     rating: 5,
-    location: "Koh Samui, Lamai"
+    location: "Lamai"
   },
   {
-    name: "Grace",
-    text: "Must visit! We were craving some western food this did not disappoint. We got all three tacos and chicken loaded fries, delicious! Staff were super attentive. If you’re in the area definitely visit.",
+    name: "Sarah J.",
+    text: "Sunday Roast is a must. The smoked pork belly and gravy are incredible. Get there early!",
     rating: 5,
-    location: "Koh Samui, Lamai"
+    location: "Baan Tai"
   },
   {
-    name: "Mia Amawasu",
-    text: "Great burger place in Lamai! The burger was juicy and flavorful, fries were crispy and delicious. Nice atmosphere, friendly staff, and good location near the beach. Highly recommended!",
+    name: "Marco R.",
+    text: "Craft beer and wood-fired smoke. This is exactly what Samui needed. 10/10.",
     rating: 5,
-    location: "Koh Samui, Lamai"
+    location: "Chaloklum"
   },
   {
-    name: "Lourens Bam",
-    text: "This is by far one of the best roasts I’ve had on the island, and I’ve been a resident here for 6 years. Absolutely mouthwatering and delicious—really enjoyed it and will definitely make this a regular spot!",
+    name: "Elena K.",
+    text: "Brutal aesthetic, amazing food. The pulled pork burger is massive and delicious.",
     rating: 5,
-    location: "Koh Samui, Lamai"
-  },
-  {
-    name: "Maddie Stride",
-    text: "Best Roast I have had in 4+ years living in Thailand. I highly recommend this place for anyone craving a proper, generous Sunday roast.",
-    rating: 5,
-    location: "Koh Samui, Lamai"
-  },
-  {
-    name: "Yanisa",
-    text: "Amazing food every time. The Sunday roast is delicious, the burgers are juicy, and the beef ribs are full of flavour. The staff are super friendly and welcoming.",
-    rating: 5,
-    location: "Koh Samui, Lamai"
+    location: "Thong Sala"
   }
 ];
 
@@ -46,10 +34,10 @@ export default function WallOfFlame() {
     <section id="reviews" className="bg-slate-dark border-b border-slate-light">
       <SectionLabel 
         mainText="WALL OF FLAME // CUSTOMER FEEDBACK" 
-        subText="5.0 RATING // 160+ GOOGLE REVIEWS"
+        subText="5.0 RATING // 500+ REVIEWS"
       />
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {REVIEWS.map((review, idx) => (
           <motion.div 
             key={idx}
@@ -57,7 +45,7 @@ export default function WallOfFlame() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1 }}
-            className="p-12 border-slate-light border-r last:border-r-0 md:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(3n)]:border-r-0 lg:border-r flex flex-col justify-between group hover:bg-slate-medium/10 transition-colors"
+            className="p-12 border-slate-light border-r last:border-r-0 md:[&:nth-child(2n)]:border-r-0 lg:border-r flex flex-col justify-between group hover:bg-slate-medium/10 transition-colors"
           >
             <div className="space-y-6">
               <div className="flex gap-1">

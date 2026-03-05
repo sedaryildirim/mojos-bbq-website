@@ -6,6 +6,7 @@ import MenuSection from "./components/MenuSection";
 import FoodGallery from "./components/FoodGallery";
 import WallOfFlame from "./components/WallOfFlame";
 import RoastCountdown from "./components/RoastCountdown";
+import ContactForm from "./components/ContactForm";
 import SectionLabel from "./components/SectionLabel";
 import LoadingScreen from "./components/LoadingScreen";
 import Footer from "./components/Footer";
@@ -55,10 +56,12 @@ export default function App() {
         
         <FoodGallery />
 
+        <WallOfFlame />
+
         {/* Locations Section */}
         <SectionLabel 
           mainText="WHERE WE ARE // FIND A MOJO'S" 
-          subText="4 LOCATIONS // KOH PHANGAN // KOH SAMUI"
+          subText="4 LOCATIONS // GULF OF THAILAND"
         />
         <section id="locations" className="grid grid-cols-1 bg-slate-dark md:grid-cols-2 xl:grid-cols-4 scroll-mt-24 border-b border-slate-light">
           {LOCATIONS.map((loc, idx) => (
@@ -68,7 +71,7 @@ export default function App() {
           ))}
         </section>
 
-        <WallOfFlame />
+        <ContactForm />
       </main>
 
       <Footer />

@@ -29,14 +29,27 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
             )}
           </div>
         </div>
+<<<<<<< HEAD
         <div className="mt-8">
           <a
             href={mapUrl}
             target="_blank"
+=======
+        <div className="mt-8 grid grid-cols-2 gap-2">
+          <a 
+            href={mapUrl} 
+            target="_blank" 
+>>>>>>> parent of c4ab469 (refactor: Update branding and location information)
             rel="noopener noreferrer"
-            className="border border-slate-600 block w-full py-3 text-center text-[9px] font-black tracking-widest text-slate-300 hover:bg-white hover:text-black uppercase transition-all"
+            className="border border-slate-600 py-3 text-center text-[9px] font-black tracking-widest text-slate-300 hover:bg-white hover:text-black uppercase transition-all"
           >
             Google Maps
+          </a>
+          <a 
+            href="#" 
+            className="border border-slate-600 py-3 text-center text-[9px] font-black tracking-widest text-slate-300 hover:bg-white hover:text-black uppercase transition-all"
+          >
+            Contact
           </a>
         </div>
       </div>

@@ -36,9 +36,15 @@ export default function FoodGallery() {
 
   return (
     <section id="gallery" className="border-slate-light border-b bg-slate-dark overflow-hidden">
+<<<<<<< HEAD
       <SectionLabel
         mainText="HERE'S WHAT TO EXPECT // OUR FOOD"
         subText="EST. 2021 // FIRE & SMOKE"
+=======
+      <SectionLabel 
+        mainText="HERE'S WHAT TO EXPECT // OUR FOOD" 
+        subText="EST. 2021 // WOOD FIRE SMOKE"
+>>>>>>> parent of c4ab469 (refactor: Update branding and location information)
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         {images.map((src, idx) => (

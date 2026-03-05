@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { name: "Feed", href: "#gallery" },
   { name: "Reviews", href: "#reviews" },
   { name: "Locations", href: "#locations" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
