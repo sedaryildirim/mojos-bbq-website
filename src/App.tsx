@@ -6,13 +6,11 @@ import MenuSection from "./components/MenuSection";
 import PitFeed from "./components/PitFeed";
 import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
-import CustomCursor from "./components/CustomCursor";
 import { LOCATIONS, MENU } from "./constants";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-dark selection:bg-matte-orange selection:text-white cursor-none">
-      <CustomCursor />
+    <div className="min-h-screen bg-slate-dark selection:bg-matte-orange selection:text-white">
       <Navbar />
       
       <main>
