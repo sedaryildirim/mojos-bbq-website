@@ -144,12 +144,12 @@ export const MENU: MenuCategory[] = [
 ];
 
 export const FEED_IMAGES = [
-  'https://picsum.photos/seed/mojo-feed-1/800/800',
-  'https://picsum.photos/seed/mojo-feed-2/800/800',
-  'https://picsum.photos/seed/mojo-feed-3/800/800',
-  'https://picsum.photos/seed/mojo-feed-4/800/800',
-  'https://picsum.photos/seed/mojo-feed-5/800/800',
-  'https://picsum.photos/seed/mojo-feed-6/800/800'
+  '/brisket-loaded-fries.jpg',
+  '/buttermilk-chicken-taco.jpg',
+  '/chicken-loaded-fries.jpg',
+  '/chicken-tenders.jpg',
+  '/souther-friend-wings-being-grabbed.jpg',
+  '/southern-fried-wings.jpg'
 ];
 
 export const REVIEWS: Review[] = [
