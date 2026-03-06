@@ -1,46 +1,7 @@
 import { motion } from "motion/react";
 import { Star, Quote } from "lucide-react";
 import SectionLabel from "./SectionLabel";
-import { Review } from "../types";
-
-const REVIEWS: Review[] = [
-  {
-    name: "Michael Gorodi",
-    text: "Been here 3+ years and there’s very few restaurants on this island that are actually worth it… I just added Mojos to my list. Insanely good food from start to finish - generous portions and top service. Worth every penny!",
-    rating: 5,
-    location: "Koh Samui, Lamai"
-  },
-  {
-    name: "Grace",
-    text: "Must visit! We were craving some western food this did not disappoint. We got all three tacos and chicken loaded fries, delicious! Staff were super attentive. If you’re in the area definitely visit.",
-    rating: 5,
-    location: "Koh Samui, Lamai"
-  },
-  {
-    name: "Mia Amawasu",
-    text: "Great burger place in Lamai! The burger was juicy and flavorful, fries were crispy and delicious. Nice atmosphere, friendly staff, and good location near the beach. Highly recommended!",
-    rating: 5,
-    location: "Koh Samui, Lamai"
-  },
-  {
-    name: "Lourens Bam",
-    text: "This is by far one of the best roasts I’ve had on the island, and I’ve been a resident here for 6 years. Absolutely mouthwatering and delicious—really enjoyed it and will definitely make this a regular spot!",
-    rating: 5,
-    location: "Koh Samui, Lamai"
-  },
-  {
-    name: "Maddie Stride",
-    text: "Best Roast I have had in 4+ years living in Thailand. I highly recommend this place for anyone craving a proper, generous Sunday roast.",
-    rating: 5,
-    location: "Koh Samui, Lamai"
-  },
-  {
-    name: "Yanisa",
-    text: "Amazing food every time. The Sunday roast is delicious, the burgers are juicy, and the beef ribs are full of flavour. The staff are super friendly and welcoming.",
-    rating: 5,
-    location: "Koh Samui, Lamai"
-  }
-];
+import { REVIEWS } from "../constants";
 
 export default function WallOfFlame() {
   return (

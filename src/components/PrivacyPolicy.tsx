@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { X } from "lucide-react";
+import { useEffect } from "react";
 
 interface PrivacyPolicyProps {
   isOpen: boolean;
@@ -7,6 +8,17 @@ interface PrivacyPolicyProps {
 }
 
 export default function PrivacyPolicy({ isOpen, onClose }: PrivacyPolicyProps) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
@@ -14,20 +26,24 @@ export default function PrivacyPolicy({ isOpen, onClose }: PrivacyPolicyProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="privacy-title"
       className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-dark/95 backdrop-blur-xl p-4 md:p-8"
     >
       <div className="relative max-w-2xl w-full bg-slate-medium border border-slate-light p-8 md:p-12 overflow-y-auto max-h-[80vh]">
         <button 
           onClick={onClose}
+          aria-label="Close privacy policy"
           className="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors"
         >
-          <X size={24} />
+          <X size={24} aria-hidden="true" />
         </button>
 
         <div className="space-y-8">
           <div className="space-y-2">
             <span className="font-mono text-[10px] text-matte-red tracking-widest uppercase">// LEGAL</span>
-            <h2 className="font-display text-4xl italic text-white uppercase italic tracking-tighter">Privacy Policy</h2>
+            <h2 id="privacy-title" className="font-display text-4xl italic text-white uppercase italic tracking-tighter">Privacy Policy</h2>
           </div>
 
           <div className="font-mono text-[11px] leading-relaxed text-slate-400 uppercase space-y-6">

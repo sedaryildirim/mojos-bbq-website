@@ -6,7 +6,6 @@ export interface Location {
   special: string | null;
   mapUrl: string;
   embedUrl: string;
-  image: string;
   orderText: string;
   deliveryUrl: string;
 }

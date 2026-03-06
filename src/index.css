@@ -16,10 +16,6 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
-  @keyframes marquee-fast {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
 }
 
 @layer utilities {
@@ -29,7 +25,9 @@
     animation: marquee 25s linear infinite;
   }
   .animate-marquee-fast {
-    animation: marquee-fast 15s linear infinite;
+    display: flex;
+    width: 200%;
+    animation: marquee 15s linear infinite;
   }
 }
 

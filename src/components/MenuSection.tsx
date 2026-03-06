@@ -3,7 +3,6 @@ import { Flame } from "lucide-react";
 import { MenuSection as MenuSectionType } from "../types";
 
 interface MenuSectionProps {
-  key?: string;
   id: string;
   number: string;
   title: string;

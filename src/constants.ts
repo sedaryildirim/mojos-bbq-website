@@ -1,4 +1,4 @@
-import { Location, MenuCategory } from "./types";
+import { Location, MenuCategory, Review } from "./types";
 
 export const LOCATIONS: Location[] = [
   {
@@ -9,7 +9,6 @@ export const LOCATIONS: Location[] = [
     special: 'Sun Roast From: 12:00 - 18:00, Every Sunday',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.464107346757865,100.0434715411214',
     embedUrl: 'https://maps.google.com/maps?q=9.464107346757865,100.0434715411214&t=&z=15&ie=UTF8&iwloc=&output=embed',
-    image: 'https://picsum.photos/seed/mojo-brisket/1200/800',
     orderText: 'ORDER LAMAI',
     deliveryUrl: 'https://r.grab.com/g/6-20260305_173231_F8AD6EACD64A4405923AA30E3C5FE29D_MEXMPS-3-C72XAZBYFBUCFE'
   },
@@ -21,7 +20,6 @@ export const LOCATIONS: Location[] = [
     special: 'Sun Roast From: 12:00 - 18:00, Every Sunday',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.786744855709996,100.00767679548328',
     embedUrl: 'https://maps.google.com/maps?q=9.786744855709996,100.00767679548328&t=&z=15&ie=UTF8&iwloc=&output=embed',
-    image: 'https://picsum.photos/seed/mojo-wings/1200/800',
     orderText: 'ORDER CHALOKLUM',
     deliveryUrl: 'https://delivery-kpg.com/stores/mojos-chaloklum'
   },
@@ -33,7 +31,6 @@ export const LOCATIONS: Location[] = [
     special: null,
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.709672218820465,99.99110258345121',
     embedUrl: 'https://maps.google.com/maps?q=9.709672218820465,99.99110258345121&t=&z=15&ie=UTF8&iwloc=&output=embed',
-    image: 'https://picsum.photos/seed/mojo-tenders/1200/800',
     orderText: 'ORDER FOOD COURT',
     deliveryUrl: 'https://delivery-kpg.com/stores/mojos-thongsala'
   },
@@ -45,7 +42,6 @@ export const LOCATIONS: Location[] = [
     special: null,
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.699976925868516,100.02452592762923',
     embedUrl: 'https://maps.google.com/maps?q=9.699976925868516,100.02452592762923&t=&z=15&ie=UTF8&iwloc=&output=embed',
-    image: 'https://picsum.photos/seed/mojo-market/1200/800',
     orderText: 'ORDER NIGHT MARKET',
     deliveryUrl: 'https://delivery-kpg.com/stores/mojos-baan-tai'
   }
@@ -154,5 +150,44 @@ export const FEED_IMAGES = [
   'https://picsum.photos/seed/mojo-feed-4/800/800',
   'https://picsum.photos/seed/mojo-feed-5/800/800',
   'https://picsum.photos/seed/mojo-feed-6/800/800'
+];
+
+export const REVIEWS: Review[] = [
+  {
+    name: "Michael Gorodi",
+    text: "Been here 3+ years and there’s very few restaurants on this island that are actually worth it… I just added Mojos to my list. Insanely good food from start to finish - generous portions and top service. Worth every penny!",
+    rating: 5,
+    location: "Koh Samui, Lamai"
+  },
+  {
+    name: "Grace",
+    text: "Must visit! We were craving some western food this did not disappoint. We got all three tacos and chicken loaded fries, delicious! Staff were super attentive. If you’re in the area definitely visit.",
+    rating: 5,
+    location: "Koh Samui, Lamai"
+  },
+  {
+    name: "Mia Amawasu",
+    text: "Great burger place in Lamai! The burger was juicy and flavorful, fries were crispy and delicious. Nice atmosphere, friendly staff, and good location near the beach. Highly recommended!",
+    rating: 5,
+    location: "Koh Samui, Lamai"
+  },
+  {
+    name: "Lourens Bam",
+    text: "This is by far one of the best roasts I’ve had on the island, and I’ve been a resident here for 6 years. Absolutely mouthwatering and delicious—really enjoyed it and will definitely make this a regular spot!",
+    rating: 5,
+    location: "Koh Samui, Lamai"
+  },
+  {
+    name: "Maddie Stride",
+    text: "Best Roast I have had in 4+ years living in Thailand. I highly recommend this place for anyone craving a proper, generous Sunday roast.",
+    rating: 5,
+    location: "Koh Samui, Lamai"
+  },
+  {
+    name: "Yanisa",
+    text: "Amazing food every time. The Sunday roast is delicious, the burgers are juicy, and the beef ribs are full of flavour. The staff are super friendly and welcoming.",
+    rating: 5,
+    location: "Koh Samui, Lamai"
+  }
 ];
 
