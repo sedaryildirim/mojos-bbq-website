@@ -15,12 +15,14 @@ interface MenuSectionProps {
 }
 
 export default function MenuSection({ id, number, title, watermark, subtitle, sections, isDark, isAccent }: MenuSectionProps) {
+  const containerClasses = `relative border-slate-light border-r p-12 scroll-mt-24 transition-all duration-700 overflow-hidden h-full flex flex-col ${
+    isAccent 
+      ? 'bg-matte-red text-white shadow-[0_0_60px_rgba(225,29,72,0.3)] z-20' 
+      : isDark ? 'bg-slate-medium/30' : ''
+  }`;
+
   return (
-    <div id={id} className={`relative border-slate-light border-r p-12 scroll-mt-24 transition-all duration-700 overflow-hidden h-full flex flex-col ${
-      isAccent 
-        ? 'bg-matte-red text-white shadow-[0_0_60px_rgba(225,29,72,0.3)] z-20' 
-        : isDark ? 'bg-slate-medium/30' : ''
-    }`}>
+    <div id={id} className={containerClasses}>
       {/* Background Watermark */}
       <div className="absolute -bottom-4 -left-4 pointer-events-none select-none opacity-[0.04] z-0">
         <span className="font-display text-[80px] leading-none uppercase italic text-white whitespace-nowrap">
@@ -35,7 +37,7 @@ export default function MenuSection({ id, number, title, watermark, subtitle, se
             backgroundSize: '24px 24px' 
           }} />
           <div className="absolute -bottom-10 -right-10 opacity-10 pointer-events-none">
-            <Flame size={240} strokeWidth={1} />
+            <Flame size={240} strokeWidth={1} aria-hidden="true" />
           </div>
           <div className="absolute bottom-0 left-0 w-full bg-white/10 py-1 overflow-hidden border-t border-white/20">
             <div className="flex whitespace-nowrap animate-marquee-fast">
@@ -95,6 +97,7 @@ export default function MenuSection({ id, number, title, watermark, subtitle, se
               >
                 <div className="flex items-center gap-2">
                   <motion.span 
+                    aria-hidden="true"
                     variants={{
                       initial: { opacity: 0, scale: 0, width: 0 },
                       hover: { opacity: 1, scale: 1, width: 6 }

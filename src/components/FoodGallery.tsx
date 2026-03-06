@@ -21,9 +21,10 @@ export default function FoodGallery() {
           >
             <img 
               src={src} 
-              alt={`Mojo's Food ${idx + 1}`}
+              alt={`Mojo's signature BBQ dish showing authentic fire and smoke preparation - Gallery Image ${idx + 1}`}
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0 brightness-75 group-hover:brightness-100"
               referrerPolicy="no-referrer"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-matte-red/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
             

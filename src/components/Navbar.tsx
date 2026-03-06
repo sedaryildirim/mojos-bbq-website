@@ -64,7 +64,7 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
       </nav>
@@ -82,8 +82,9 @@ export default function Navbar() {
             <button 
               className="absolute top-8 right-8 text-white p-2"
               onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close menu"
             >
-              <X size={32} />
+              <X size={32} aria-hidden="true" />
             </button>
 
             <div className="flex flex-col gap-8 text-center">

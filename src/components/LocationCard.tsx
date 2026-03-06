@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Location as LocationProps } from "../types";
 
-export default function LocationCard({ id, island, area, hours, special, mapUrl, embedUrl, image, orderText, deliveryUrl }: LocationProps) {
+export default function LocationCard({ id, island, area, hours, special, mapUrl, embedUrl, orderText, deliveryUrl }: Omit<LocationProps, 'image'>) {
   return (
     <div id={id} className="border-slate-light flex flex-col border-r bg-slate-dark scroll-mt-24 h-full">
       <div className="border-slate-light flex flex-grow flex-col justify-between border-b p-10">
@@ -22,7 +22,7 @@ export default function LocationCard({ id, island, area, hours, special, mapUrl,
             href={mapUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="border border-slate-600 block w-full py-3 text-center text-[9px] font-black tracking-widest text-slate-300 hover:bg-white hover:text-black uppercase transition-all"
+            className="border border-slate-600 block w-full py-3 text-center text-[9px] font-black tracking-widest text-slate-300 hover:bg-white hover:text-black uppercase transition-all focus-visible:bg-white focus-visible:text-black"
           >
             Google Maps
           </a>

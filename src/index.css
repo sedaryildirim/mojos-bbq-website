@@ -40,3 +40,8 @@ html {
 body {
   @apply bg-slate-dark text-white antialiased selection:bg-matte-red selection:text-white;
 }
+
+/* Accessibility: Visible focus states for keyboard navigation */
+:focus-visible {
+  @apply outline-2 outline-offset-4 outline-matte-red;
+}

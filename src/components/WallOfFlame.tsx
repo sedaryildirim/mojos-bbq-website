@@ -63,11 +63,11 @@ export default function WallOfFlame() {
             <div className="space-y-6">
               <div className="flex gap-1">
                 {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} size={10} className="fill-matte-red text-matte-red" />
+                  <Star key={i} size={10} className="fill-matte-red text-matte-red" aria-hidden="true" />
                 ))}
               </div>
               <div className="relative">
-                <Quote className="absolute -top-4 -left-4 text-slate-800 h-8 w-8 -z-10" />
+                <Quote className="absolute -top-4 -left-4 text-slate-800 h-8 w-8 -z-10" aria-hidden="true" />
                 <p className="font-mono text-[11px] leading-relaxed text-slate-300 uppercase tracking-wide">
                   "{review.text}"
                 </p>

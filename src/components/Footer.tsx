@@ -12,15 +12,8 @@ export default function Footer({ onPrivacyClick }: FooterProps) {
 
   return (
     <footer className="relative border-t border-slate-light bg-slate-dark overflow-hidden">
-      {/* Background Texture Overlay */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay">
-        <img 
-          src="https://image.pollinations.ai/prompt/dark%20charcoal%20brushed%20metal%20texture%20industrial%20noise" 
-          className="w-full h-full object-cover"
-          referrerPolicy="no-referrer"
-          alt=""
-        />
-      </div>
+      {/* Background Texture Overlay - CSS Noise for stability */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
 
       {/* Large Watermark Branding */}
       <div className="absolute -bottom-10 -left-10 pointer-events-none select-none opacity-[0.02]">
@@ -46,7 +39,7 @@ export default function Footer({ onPrivacyClick }: FooterProps) {
               aria-label="Back to top"
               className="group flex items-center gap-2 font-mono text-[10px] tracking-widest text-slate-400 uppercase transition-colors hover:text-white"
             >
-              Back to top <ArrowUpRight size={12} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+              Back to top <ArrowUpRight size={12} aria-hidden="true" className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
             </button>
           </div>
 
@@ -71,8 +64,8 @@ export default function Footer({ onPrivacyClick }: FooterProps) {
             <h4 className="font-mono text-[11px] font-bold tracking-[0.3em] text-slate-300 uppercase">Connect</h4>
             <div className="flex flex-col gap-4">
               {[
-                { name: 'Instagram', handle: '@mojos.th', url: 'https://www.instagram.com/mojos.th/', icon: <Instagram size={14} /> },
-                { name: 'Facebook', handle: 'mojos.th', url: 'https://www.facebook.com/mojos.th/', icon: <Facebook size={14} /> },
+                { name: 'Instagram', handle: '@mojos.th', url: 'https://www.instagram.com/mojos.th/', icon: <Instagram size={14} aria-hidden="true" /> },
+                { name: 'Facebook', handle: 'mojos.th', url: 'https://www.facebook.com/mojos.th/', icon: <Facebook size={14} aria-hidden="true" /> },
               ].map((link) => (
                 <a 
                   key={link.name}
