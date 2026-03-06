@@ -48,6 +48,13 @@ export default function LoadingScreen() {
                 // Calibrating Brisket Temps...
               </span>
             </div>
+            
+            <button 
+              onClick={() => setIsVisible(false)}
+              className="mt-8 font-mono text-[8px] tracking-[0.3em] text-slate-700 uppercase hover:text-matte-red transition-colors"
+            >
+              [ Skip Intro ]
+            </button>
           </div>
 
           <div className="absolute bottom-12 font-display text-4xl italic text-white/5 uppercase">

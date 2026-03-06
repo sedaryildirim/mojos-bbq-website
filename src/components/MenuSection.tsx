@@ -1,10 +1,6 @@
 import { motion } from "motion/react";
 import { Flame } from "lucide-react";
-
-interface MenuItem {
-  name: string;
-  price: number;
-}
+import { MenuSection as MenuSectionType } from "../types";
 
 interface MenuSectionProps {
   key?: string;
@@ -13,10 +9,7 @@ interface MenuSectionProps {
   title: string;
   watermark?: string;
   subtitle?: string;
-  sections: {
-    name?: string;
-    items: MenuItem[];
-  }[];
+  sections: MenuSectionType[];
   isDark?: boolean;
   isAccent?: boolean;
 }

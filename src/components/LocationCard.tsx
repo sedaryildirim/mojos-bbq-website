@@ -1,18 +1,5 @@
 import { motion } from "motion/react";
-
-interface LocationProps {
-  key?: string;
-  id: string;
-  island: string;
-  area: string;
-  hours: string;
-  special: string | null;
-  mapUrl: string;
-  embedUrl: string;
-  image: string;
-  orderText: string;
-  deliveryUrl: string;
-}
+import { Location as LocationProps } from "../types";
 
 export default function LocationCard({ id, island, area, hours, special, mapUrl, embedUrl, image, orderText, deliveryUrl }: LocationProps) {
   return (

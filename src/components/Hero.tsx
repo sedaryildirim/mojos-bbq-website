@@ -25,10 +25,7 @@ export default function Hero() {
           className="w-full h-full object-cover scale-110 brightness-[0.4] contrast-[1.2]"
           referrerPolicy="no-referrer"
           alt="Mojo's Restaurant Interior"
-          onError={(e) => {
-            // Fallback to a high-quality descriptive prompt if the direct link fails
-            (e.target as HTMLImageElement).src = "https://image.pollinations.ai/prompt/Dark%20moody%20restaurant%20interior%20at%20night%20with%20red%20neon%20sign%20Mojo's%20on%20the%20roof%20David%20Bowie%20mural%20on%20the%20left%20wall%20wooden%20tables%20grey%20chairs%20industrial%20aesthetic%20cinematic%20photography%20high%20resolution";
-          }}
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-slate-dark" />
       </motion.div>

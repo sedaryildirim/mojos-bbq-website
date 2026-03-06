@@ -1,8 +1,9 @@
 import { motion } from "motion/react";
 import { Star, Quote } from "lucide-react";
 import SectionLabel from "./SectionLabel";
+import { Review } from "../types";
 
-const REVIEWS = [
+const REVIEWS: Review[] = [
   {
     name: "Michael Gorodi",
     text: "Been here 3+ years and there’s very few restaurants on this island that are actually worth it… I just added Mojos to my list. Insanely good food from start to finish - generous portions and top service. Worth every penny!",

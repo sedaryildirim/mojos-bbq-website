@@ -1,4 +1,6 @@
-export const LOCATIONS = [
+import { Location, MenuCategory } from "./types";
+
+export const LOCATIONS: Location[] = [
   {
     id: 'lamai',
     island: 'KOH SAMUI',
@@ -7,7 +9,7 @@ export const LOCATIONS = [
     special: 'Sun Roast From: 12:00 - 18:00, Every Sunday',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.464107346757865,100.0434715411214',
     embedUrl: 'https://maps.google.com/maps?q=9.464107346757865,100.0434715411214&t=&z=15&ie=UTF8&iwloc=&output=embed',
-    image: 'https://image.pollinations.ai/prompt/Brutalistic%20high-contrast%20moody%20food%20photography%20of%20smoked%20beef%20brisket',
+    image: 'https://picsum.photos/seed/mojo-brisket/1200/800',
     orderText: 'ORDER LAMAI',
     deliveryUrl: 'https://r.grab.com/g/6-20260305_173231_F8AD6EACD64A4405923AA30E3C5FE29D_MEXMPS-3-C72XAZBYFBUCFE'
   },
@@ -19,7 +21,7 @@ export const LOCATIONS = [
     special: 'Sun Roast From: 12:00 - 18:00, Every Sunday',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.786744855709996,100.00767679548328',
     embedUrl: 'https://maps.google.com/maps?q=9.786744855709996,100.00767679548328&t=&z=15&ie=UTF8&iwloc=&output=embed',
-    image: 'https://image.pollinations.ai/prompt/Southern%20Fried%20Chicken%20Wings%20on%20black%20metal%20tray%20moody',
+    image: 'https://picsum.photos/seed/mojo-wings/1200/800',
     orderText: 'ORDER CHALOKLUM',
     deliveryUrl: 'https://delivery-kpg.com/stores/mojos-chaloklum'
   },
@@ -31,7 +33,7 @@ export const LOCATIONS = [
     special: null,
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.709672218820465,99.99110258345121',
     embedUrl: 'https://maps.google.com/maps?q=9.709672218820465,99.99110258345121&t=&z=15&ie=UTF8&iwloc=&output=embed',
-    image: 'https://image.pollinations.ai/prompt/Buttermilk%20chicken%20tenders%20industrial%20style',
+    image: 'https://picsum.photos/seed/mojo-tenders/1200/800',
     orderText: 'ORDER FOOD COURT',
     deliveryUrl: 'https://delivery-kpg.com/stores/mojos-thongsala'
   },
@@ -43,13 +45,13 @@ export const LOCATIONS = [
     special: null,
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=9.699976925868516,100.02452592762923',
     embedUrl: 'https://maps.google.com/maps?q=9.699976925868516,100.02452592762923&t=&z=15&ie=UTF8&iwloc=&output=embed',
-    image: 'https://image.pollinations.ai/prompt/Night%20market%20BBQ%20stall%20neon%20lights%20dark%20moody',
+    image: 'https://picsum.photos/seed/mojo-market/1200/800',
     orderText: 'ORDER NIGHT MARKET',
     deliveryUrl: 'https://delivery-kpg.com/stores/mojos-baan-tai'
   }
 ];
 
-export const MENU = [
+export const MENU: MenuCategory[] = [
   {
     id: 'starters',
     number: '01',
@@ -146,10 +148,11 @@ export const MENU = [
 ];
 
 export const FEED_IMAGES = [
-  'https://image.pollinations.ai/prompt/Brutal%20BBQ%20moody%20aesthetic%20wood%20fire',
-  'https://image.pollinations.ai/prompt/Chef%20slicing%20brisket%20black%20gloves',
-  'https://image.pollinations.ai/prompt/Craft%20beer%20on%20dark%20wood%20low%20light',
-  'https://image.pollinations.ai/prompt/Southern%20Fried%20Chicken%20close%20up%20moody',
-  'https://image.pollinations.ai/prompt/Neon%20sign%20MOJOS%20dark%20night',
-  'https://image.pollinations.ai/prompt/BBQ%20Platter%20overhead%20dark%20aesthetic'
+  'https://picsum.photos/seed/mojo-feed-1/800/800',
+  'https://picsum.photos/seed/mojo-feed-2/800/800',
+  'https://picsum.photos/seed/mojo-feed-3/800/800',
+  'https://picsum.photos/seed/mojo-feed-4/800/800',
+  'https://picsum.photos/seed/mojo-feed-5/800/800',
+  'https://picsum.photos/seed/mojo-feed-6/800/800'
 ];
+

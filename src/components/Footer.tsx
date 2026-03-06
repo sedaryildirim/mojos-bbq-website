@@ -1,7 +1,11 @@
 import { Instagram, Facebook, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 
-export default function Footer() {
+interface FooterProps {
+  onPrivacyClick: () => void;
+}
+
+export default function Footer({ onPrivacyClick }: FooterProps) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -39,7 +43,8 @@ export default function Footer() {
             </div>
             <button 
               onClick={scrollToTop}
-              className="group flex items-center gap-2 font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white"
+              aria-label="Back to top"
+              className="group flex items-center gap-2 font-mono text-[10px] tracking-widest text-slate-400 uppercase transition-colors hover:text-white"
             >
               Back to top <ArrowUpRight size={12} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
             </button>
@@ -53,7 +58,7 @@ export default function Footer() {
                 <a 
                   key={item}
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
-                  className="font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-matte-red"
+                  className="font-mono text-[10px] tracking-widest text-slate-400 uppercase transition-colors hover:text-matte-red"
                 >
                   {item}
                 </a>
@@ -74,7 +79,7 @@ export default function Footer() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white"
+                  className="flex items-center gap-3 font-mono text-[10px] tracking-widest text-slate-400 uppercase transition-colors hover:text-white"
                 >
                   {link.icon} <span className="text-slate-300">{link.name}</span> <span className="text-slate-600">//</span> {link.handle}
                 </a>
@@ -86,12 +91,15 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="font-mono text-[11px] font-bold tracking-[0.3em] text-slate-300 uppercase">Support</h4>
             <div className="flex flex-col gap-4">
-              <span className="font-mono text-[10px] tracking-widest text-slate-500 uppercase">
-                contact: TBC
+              <span className="font-mono text-[10px] tracking-widest text-slate-400 uppercase">
+                contact: info@mojos-bbq.com
               </span>
-              <a href="#" className="font-mono text-[10px] tracking-widest text-slate-500 uppercase transition-colors hover:text-white">
+              <button 
+                onClick={onPrivacyClick}
+                className="font-mono text-[10px] tracking-widest text-slate-400 uppercase transition-colors hover:text-white text-left"
+              >
                 Privacy Policy
-              </a>
+              </button>
             </div>
           </div>
         </div>

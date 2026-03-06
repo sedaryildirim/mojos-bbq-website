@@ -41,7 +41,11 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-auto max-w-7xl px-8 flex items-center justify-between">
-          <a href="#" className="font-display text-2xl italic text-matte-red uppercase tracking-tighter">
+          <a 
+            href="#" 
+            aria-label="Mojo's Home"
+            className="font-display text-2xl italic text-matte-red uppercase tracking-tighter"
+          >
             Mojos
           </a>
 
@@ -62,6 +66,7 @@ export default function Navbar() {
           <button 
             className="md:hidden text-white p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -81,6 +86,7 @@ export default function Navbar() {
             <button 
               className="absolute top-8 right-8 text-white p-2"
               onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close menu"
             >
               <X size={32} />
             </button>
@@ -101,7 +107,7 @@ export default function Navbar() {
               ))}
             </div>
 
-            <div className="absolute bottom-12 font-mono text-[10px] tracking-widest text-slate-500 uppercase">
+            <div className="absolute bottom-12 font-mono text-[10px] tracking-widest text-slate-400 uppercase">
               // MOJOS BBQ THAILAND //
             </div>
           </motion.div>

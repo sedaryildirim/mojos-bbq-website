@@ -10,9 +10,13 @@ import SectionLabel from "./components/SectionLabel";
 import LoadingScreen from "./components/LoadingScreen";
 import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 import { LOCATIONS, MENU } from "./constants";
+import { useState } from "react";
 
 export default function App() {
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-slate-dark selection:bg-matte-red selection:text-white">
       <LoadingScreen />
@@ -71,7 +75,8 @@ export default function App() {
         <WallOfFlame />
       </main>
 
-      <Footer />
+      <Footer onPrivacyClick={() => setIsPrivacyOpen(true)} />
+      <PrivacyPolicy isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
     </div>
   );
 }
