@@ -144,7 +144,7 @@ export const MENU: MenuCategory[] = [
 ];
 
 export const FEED_IMAGES = [
-  '/public/brisket-loaded-fries.jpg',
+  '/brisket-loaded-fries.jpg',
   '/buttermilk-chicken-taco.jpg',
   '/chicken-loaded-fries.jpg',
   '/chicken-tenders.jpg',
