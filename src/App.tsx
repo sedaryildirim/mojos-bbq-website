@@ -7,7 +7,6 @@ import FoodGallery from "./components/FoodGallery";
 import WallOfFlame from "./components/WallOfFlame";
 import RoastCountdown from "./components/RoastCountdown";
 import SectionLabel from "./components/SectionLabel";
-import LoadingScreen from "./components/LoadingScreen";
 import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
 import PrivacyPolicy from "./components/PrivacyPolicy";
@@ -19,7 +18,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-dark selection:bg-matte-red selection:text-white">
-      <LoadingScreen />
       <Navbar />
       
       <main>

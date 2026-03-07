@@ -104,6 +104,14 @@ export default function Footer({ onPrivacyClick }: FooterProps) {
               © 2026 MOJOS THAILAND // ALL RIGHTS RESERVED
             </div>
             <div className="flex gap-8">
+              <a 
+                href="https://cdc-group-landing-page.pages.dev/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-mono text-[9px] tracking-[0.3em] text-slate-500 uppercase transition-colors hover:text-matte-red"
+              >
+                CDC Hospitality Group
+              </a>
               <span className="font-mono text-[9px] tracking-[0.3em] text-slate-700 uppercase">
                 Designed for the heat
               </span>

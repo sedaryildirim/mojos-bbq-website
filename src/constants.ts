@@ -151,6 +151,7 @@ export const FEED_IMAGES = [
   '/souther-friend-wings-being-grabbed.jpg',
   '/southern-fried-wings.jpg'
 ];
+// Note: Ensure these files exist in the /public folder on GitHub with exact casing.
 
 export const REVIEWS: Review[] = [
   {
