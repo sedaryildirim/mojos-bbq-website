@@ -3,10 +3,18 @@ import { motion } from "motion/react";
 
 export default function RoastCountdown() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [isBeingServed, setIsBeingServed] = useState(false);
 
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date();
+      
+      // Check if it's Sunday (0) between 12:00 and 18:00
+      const isSunday = now.getDay() === 0;
+      const hour = now.getHours();
+      const beingServed = isSunday && hour >= 12 && hour < 18;
+      setIsBeingServed(beingServed);
+
       // Next Sunday at 12:00 PM
       const nextSunday = new Date();
       nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7);
@@ -53,26 +61,38 @@ export default function RoastCountdown() {
         </div>
 
         <div className="flex gap-4 md:gap-8">
-          {[
-            { label: "Days", value: timeLeft.days },
-            { label: "Hours", value: timeLeft.hours },
-            { label: "Mins", value: timeLeft.minutes },
-            { label: "Secs", value: timeLeft.seconds },
-          ].map((item) => (
-            <div key={item.label} className="flex flex-col items-center">
-              <motion.span 
-                key={item.value}
-                initial={{ y: 10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                className="font-display text-4xl md:text-6xl italic text-white"
-              >
-                {String(item.value).padStart(2, '0')}
-              </motion.span>
-              <span className="font-mono text-[8px] tracking-widest text-white/60 uppercase mt-1">
-                {item.label}
+          {isBeingServed ? (
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              className="flex flex-col items-center justify-center"
+            >
+              <span className="font-display text-4xl md:text-6xl italic text-white uppercase animate-pulse">
+                Being Served Now
               </span>
-            </div>
-          ))}
+            </motion.div>
+          ) : (
+            [
+              { label: "Days", value: timeLeft.days },
+              { label: "Hours", value: timeLeft.hours },
+              { label: "Mins", value: timeLeft.minutes },
+              { label: "Secs", value: timeLeft.seconds },
+            ].map((item) => (
+              <div key={item.label} className="flex flex-col items-center">
+                <motion.span 
+                  key={item.value}
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  className="font-display text-4xl md:text-6xl italic text-white"
+                >
+                  {String(item.value).padStart(2, '0')}
+                </motion.span>
+                <span className="font-mono text-[8px] tracking-widest text-white/60 uppercase mt-1">
+                  {item.label}
+                </span>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>

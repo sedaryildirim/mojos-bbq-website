@@ -22,24 +22,29 @@ export default function Hero() {
       >
         <img 
           src="https://i.imgur.com/gNL13PE.jpeg" 
-          className="w-full h-full object-cover scale-110 brightness-[0.4] contrast-[1.2]"
+          className="w-full h-full object-cover scale-110 brightness-[0.8] contrast-[1.1]"
           referrerPolicy="no-referrer"
           alt="Mojo's Restaurant Interior"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-slate-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-slate-dark/60" />
       </motion.div>
-      <motion.h1 
+      <motion.div
         initial={{ scale: 2, opacity: 0, filter: "blur(10px)" }}
         animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
         transition={{ 
           duration: 0.8, 
-          ease: [0.21, 1.11, 0.81, 0.99] // Custom "slam" ease
+          ease: [0.21, 1.11, 0.81, 0.99] 
         }}
-        className="text-matte-red text-[16vw] leading-[0.8] font-display tracking-tighter uppercase italic lg:text-[13vw] relative z-10"
+        className="relative z-10 w-[45vw] max-w-lg"
       >
-        Mojos
-      </motion.h1>
+        <img 
+          src="/mojos-white-logo.png" 
+          alt="Mojos BBQ" 
+          className="w-full h-auto object-contain"
+          referrerPolicy="no-referrer"
+        />
+      </motion.div>
       <motion.p 
         initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
