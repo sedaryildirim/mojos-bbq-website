@@ -1,0 +1,23 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# --- PROTECTED ASSETS RULE ---
+# Prevent modifications to specific image types and asset folders during sync
+# This ensures local placeholders or deletions do not overwrite GitHub assets
+
+# Protected File Types
+*.jpg
+*.png
+*.svg
+
+# Protected Folders
+/public/assets/images/
+/public/assets/
+/public/images/
+/public/

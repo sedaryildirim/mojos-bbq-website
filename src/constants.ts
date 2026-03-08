@@ -92,8 +92,8 @@ export const MENU: MenuCategory[] = [
           { name: 'MOJO CLASSIC', price: 300 },
           { name: 'BACON CHEESE', price: 310 },
           { name: 'BLUE CHEESE', price: 350 },
-          { name: 'STHN FRIED CHICKEN', price: 290 },
-          { name: 'THE PITMASTER BRISKET', price: 410 },
+          { name: "SOUTHERN FRIED CHICKEN", price: 290 },
+          { name: "BRISKET", price: 410 },
           { name: 'PULLED PORK BURGER', price: 290 },
           { name: 'VEGE STACK', price: 260 }
         ]
