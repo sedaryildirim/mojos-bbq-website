@@ -15,19 +15,12 @@ export default function Footer({ onPrivacyClick }: FooterProps) {
       {/* Background Texture Overlay - CSS Noise for stability */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
 
-      {/* Large Watermark Branding */}
-      <div className="absolute -bottom-10 -left-10 pointer-events-none select-none opacity-[0.02]">
-        <span className="font-display text-[30vw] leading-none uppercase italic text-white">
-          Mojos
-        </span>
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-7xl px-8 py-24 md:py-32">
-        <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-4">
+      <div className="relative z-10 mx-auto max-w-7xl px-8 py-12 md:py-16">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand Column */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h3 className="font-display text-4xl uppercase italic text-matte-red">Mojos</h3>
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <h3 className="font-display text-2xl uppercase italic text-matte-red">Mojos</h3>
               <p className="font-mono text-[10px] leading-relaxed tracking-wider text-slate-400 uppercase">
                 Smoked in the tropics.<br />
                 Fire & Smoke // Koh Phangan // Koh Samui vibes.<br />
@@ -44,9 +37,9 @@ export default function Footer({ onPrivacyClick }: FooterProps) {
           </div>
 
           {/* Navigation Column */}
-          <div className="space-y-6">
+          <div className="space-y-3">
             <h4 className="font-mono text-[11px] font-bold tracking-[0.3em] text-slate-300 uppercase">Explore</h4>
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-2">
               {['Menu', 'Locations'].map((item) => (
                 <a 
                   key={item}
@@ -60,9 +53,9 @@ export default function Footer({ onPrivacyClick }: FooterProps) {
           </div>
 
           {/* Social Column */}
-          <div className="space-y-6">
+          <div className="space-y-3">
             <h4 className="font-mono text-[11px] font-bold tracking-[0.3em] text-slate-300 uppercase">Connect</h4>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
               {[
                 { name: 'Instagram', handle: '@mojos.th', url: 'https://www.instagram.com/mojos.th/', icon: <Instagram size={14} aria-hidden="true" /> },
                 { name: 'Facebook', handle: 'mojos.th', url: 'https://www.facebook.com/mojos.th/', icon: <Facebook size={14} aria-hidden="true" /> },
@@ -81,9 +74,9 @@ export default function Footer({ onPrivacyClick }: FooterProps) {
           </div>
 
           {/* Legal/Admin Column */}
-          <div className="space-y-6">
+          <div className="space-y-3">
             <h4 className="font-mono text-[11px] font-bold tracking-[0.3em] text-slate-300 uppercase">Support</h4>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
               <span className="font-mono text-[10px] tracking-widest text-slate-400 uppercase">
                 contact: info@mojos-bbq.com
               </span>
@@ -98,7 +91,7 @@ export default function Footer({ onPrivacyClick }: FooterProps) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-24 border-t border-slate-light/30 pt-12">
+        <div className="mt-12 border-t border-slate-light/30 pt-6">
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             <div className="font-mono text-[9px] tracking-[0.3em] text-slate-600 uppercase">
               © 2026 MOJOS THAILAND // ALL RIGHTS RESERVED
