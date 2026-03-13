@@ -144,12 +144,12 @@ export const MENU: MenuCategory[] = [
 ];
 
 export const FEED_IMAGES = [
-  '/brisket-loaded-fries.jpg',
-  '/buttermilk-chicken-taco.jpg',
-  '/chicken-loaded-fries.jpg',
-  '/chicken-tenders.jpg',
-  '/souther-friend-wings-being-grabbed.jpg',
-  '/southern-fried-wings.jpg'
+  '/assets/imgs/brisket-loaded-fries.jpg',
+  '/assets/imgs/buttermilk-chicken-taco.jpg',
+  '/assets/imgs/chicken-loaded-fries.jpg',
+  '/assets/imgs/chicken-tenders.jpg',
+  '/assets/imgs/souther-friend-wings-being-grabbed.jpg',
+  '/assets/imgs/southern-fried-wings.jpg'
 ];
 // Note: Ensure these files exist in the /public folder on GitHub with exact casing.
 

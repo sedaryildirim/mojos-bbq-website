@@ -39,7 +39,7 @@ export default function Hero() {
         className="relative z-10 w-[45vw] max-w-lg"
       >
         <img 
-          src="/mojos-white-logo.png" 
+          src="/assets/logos/mojos-white-logo.png" 
           alt="Mojos BBQ" 
           className="w-full h-auto object-contain"
           referrerPolicy="no-referrer"

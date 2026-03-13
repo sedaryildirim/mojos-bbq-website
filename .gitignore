@@ -1,23 +1,35 @@
-node_modules/
-build/
-dist/
-coverage/
-.DS_Store
+# Logs
+logs
 *.log
-.env*
-!.env.example
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# --- PROTECTED ASSETS RULE ---
-# Prevent modifications to specific image types and asset folders during sync
-# This ensures local placeholders or deletions do not overwrite GitHub assets
+node_modules
+dist
+dist-ssr
+*.local
 
-# Protected File Types
-*.jpg
-*.png
-*.svg
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# Protected Folders
-public/assets/
-/public/assets/
-/public/assets/images/
-/public/images/
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS files
+.DS_Store
+Thumbs.db

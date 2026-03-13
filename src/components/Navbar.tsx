@@ -43,7 +43,7 @@ export default function Navbar() {
         <div className="mx-auto max-w-7xl px-8 flex items-center justify-between">
           <a href="#" className="flex items-center">
             <img 
-              src="/mojos-white-logo.png" 
+              src="/assets/logos/mojos-white-logo.png" 
               alt="Mojos BBQ" 
               className="h-8 w-auto object-contain"
               referrerPolicy="no-referrer"
